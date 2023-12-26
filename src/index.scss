@@ -1,0 +1,23 @@
+:root {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // min-height: 100vh;
+    background: #1b1b1f;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+    position: absolute;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.075);
+    border-radius: 1rem;
+}
