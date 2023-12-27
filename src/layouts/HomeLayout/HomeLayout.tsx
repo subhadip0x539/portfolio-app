@@ -1,5 +1,6 @@
 import { Box, Container, Toolbar } from "@mui/material";
-import { AppBar } from "../../components/shared/AppBar";
+import { HomeAppBar as AppBar } from "../../components/shared/AppBars";
+import { Outlet } from "react-router";
 
 export function HomeLayout() {
   return (
@@ -8,12 +9,13 @@ export function HomeLayout() {
         height: "100%",
         width: "100%",
         background: (theme) => theme.palette.background.default,
-        overflow: "auto",
       }}
     >
       <AppBar />
       <Toolbar />
-      <Container sx={{ my: 4, height: "200vh" }}></Container>
+      <Container sx={{ my: 4 }}>
+        <Outlet />
+      </Container>
     </Box>
   );
 }
