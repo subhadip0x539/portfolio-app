@@ -7,17 +7,16 @@ body {
     padding: 0;
     box-sizing: border-box;
     // min-height: 100vh;
-    background: #1b1b1f;
+    // background: #1b1b1f;
     overflow: auto;
 }
 
 ::-webkit-scrollbar {
     width: 0.5rem;
     height: 0.5rem;
-    position: absolute;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.075);
+    background: var(--scrollbar-thumb-color);
     border-radius: 1rem;
 }
