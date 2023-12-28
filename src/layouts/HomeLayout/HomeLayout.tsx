@@ -1,6 +1,7 @@
 import { Box, Container } from "@mui/material";
 import { HomeAppBar as AppBar } from "../../components/shared/AppBars";
 import { Outlet } from "react-router";
+import { AnimatePresence } from "framer-motion";
 
 export function HomeLayout() {
   return (
@@ -14,16 +15,22 @@ export function HomeLayout() {
       }}
     >
       <AppBar />
-      <Box
-        sx={{
-          flex: 1,
-          overflow: "auto",
-        }}
-      >
-        <Container>
-          <Outlet />
-        </Container>
-      </Box>
+      <AnimatePresence mode="wait" initial={true}>
+        <Box
+          sx={{
+            flex: 1,
+            overflow: "auto",
+          }}
+        >
+          <Container
+            sx={{
+              height: "100%",
+            }}
+          >
+            <Outlet />
+          </Container>
+        </Box>
+      </AnimatePresence>
     </Box>
   );
 }

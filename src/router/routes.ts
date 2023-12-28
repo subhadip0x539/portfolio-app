@@ -1,7 +1,7 @@
 import { jsx } from "@emotion/react";
 import { HomeLayout } from "../layouts";
 import { IRoute } from "../types/router/routes";
-import { About, Contact, Experience, Skills } from "../pages";
+import { About, Contact, Experience, Home, Skills } from "../pages";
 
 const routes: IRoute[] = [
   {
@@ -12,7 +12,12 @@ const routes: IRoute[] = [
       {
         path: "",
         exact: true,
-        element: jsx(About, {}),
+        element: jsx(Home, {}),
+      },
+      {
+        path: "home",
+        exact: true,
+        element: jsx(Home, {}),
       },
       {
         path: "about",
