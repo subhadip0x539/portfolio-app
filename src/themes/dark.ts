@@ -9,6 +9,7 @@ const dark: Theme = createTheme({
       styleOverrides: `
         :root {
           --scrollbar-thumb-color: rgba(255, 255, 255, 0.075);
+          --slide-screen-bg: #161618;
         }
       `,
     },

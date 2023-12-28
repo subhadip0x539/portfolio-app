@@ -8,7 +8,7 @@ function App() {
   return (
     <ThemeProvider theme={dark}>
       <CssBaseline />
-      <Box className="App">
+      <Box className="app" sx={{ height: "100%", width: "100%" }}>
         <RouterProvider router={router} />
       </Box>
     </ThemeProvider>
