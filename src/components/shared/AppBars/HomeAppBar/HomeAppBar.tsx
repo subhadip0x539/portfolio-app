@@ -1,14 +1,7 @@
-import {
-  Container,
-  AppBar,
-  Toolbar,
-  useScrollTrigger,
-  Typography,
-  Chip,
-} from "@mui/material";
+import { Container, AppBar, Toolbar, Typography, Chip } from "@mui/material";
 import { Box } from "@mui/system";
 import { LogoIcon } from "../../../global/Icons";
-import { useNavigate, useParams } from "react-router";
+import { useNavigate, useLocation, matchPath } from "react-router";
 
 const links: { name: string; path: string }[] = [
   {
@@ -31,11 +24,7 @@ const links: { name: string; path: string }[] = [
 
 export function HomeAppBar() {
   const navigate = useNavigate();
-  const { sectionId } = useParams();
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
-  });
+  const { pathname } = useLocation();
 
   const handleClickNavigate = (params: { path: string }) => {
     const { path } = params;
@@ -45,13 +34,10 @@ export function HomeAppBar() {
 
   return (
     <AppBar
+      position="static"
       sx={{
-        background: "transparent",
+        background: (theme) => theme.palette.background.default,
         boxShadow: "none",
-        ...(trigger && {
-          background: (theme) => theme.palette.background.default,
-          boxShadow: 1,
-        }),
       }}
     >
       <Toolbar>
@@ -80,7 +66,9 @@ export function HomeAppBar() {
                     cursor: "pointer",
                     color: "text.secondary",
                     transition: "color 0.3s",
-                    ...(sectionId === item.path && { color: "primary.main" }),
+                    ...(matchPath(pathname, `/${item.path}`) && {
+                      color: "primary.main",
+                    }),
                     ":hover": { color: "primary.main" },
                   }}
                   onClick={() => {
