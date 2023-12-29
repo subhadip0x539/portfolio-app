@@ -58,8 +58,24 @@ export function HomeAppBar() {
               justifyContent: "space-between",
             }}
           >
-            <LogoIcon />
-
+            <Box
+              sx={{
+                display: "flex",
+                gap: 2,
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <LogoIcon />
+              <Typography
+                sx={{
+                  fontFamily: ['"Roboto Mono"', "monoscape"].join(","),
+                  color: "text.secondary",
+                }}
+              >
+                Subhadip Biswas
+              </Typography>
+            </Box>
             <Box
               sx={{
                 display: "flex",
