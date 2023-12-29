@@ -1,6 +1,6 @@
 import { SvgIcon, SvgIconProps } from "@mui/material";
 
-export function LogoIcon(props: SvgIconProps) {
+export function LightningIcon(props: SvgIconProps) {
   return (
     <SvgIcon
       fill="none"
