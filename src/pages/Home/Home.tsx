@@ -1,13 +1,19 @@
-import { Box, Button, Chip, IconButton, Typography } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
 import { useIsPresent, motion } from "framer-motion";
 import { ScreenSlide } from "../../components/shared/Slides";
-import { useTheme } from "@emotion/react";
+import { useTheme } from "@mui/material/styles";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import Resume from "../../assets/resume.pdf";
+import { LightningIcon } from "../../components/global/Icons";
 
-const socialLinks: any[] = [
+const socialLinks: {
+  label: string;
+  description: string;
+  link: string;
+  icon: JSX.Element;
+}[] = [
   {
     label: "GitHub",
     description: "",
@@ -38,12 +44,13 @@ export function Home() {
         height: "100%",
         display: "flex",
         alignItems: "center",
+        justifyContent: "space-between",
       }}
     >
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1, duration: 0.5 }}
+        transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
         style={{
           display: "flex",
           flexDirection: "column",
@@ -119,9 +126,6 @@ export function Home() {
               fontSize: 12,
               fontFamily: ['"Roboto Mono"', "monoscape"].join(","),
             }}
-            // onClick={() => {
-            //   window.open(Resume);
-            // }}
           >
             Resume
           </Button>
@@ -145,6 +149,40 @@ export function Home() {
           </Box>
         </Box>
       </motion.div>
+      <div
+        style={{
+          position: "relative",
+        }}
+      >
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 2.75, duration: 0.3 }}
+          style={{
+            height: 210,
+            width: 210,
+            background: "linear-gradient( -45deg, #bd34fe 50%, #47caff 50% )",
+            filter: "blur(80px)",
+            animation: "glow 1s ease-in-out infinite alternate",
+          }}
+        ></motion.div>
+        <motion.div
+          initial={{ y: "-75%", x: "-50%", opacity: 0 }}
+          animate={{ y: "-50%", x: "-50%", opacity: 1 }}
+          transition={{
+            type: "spring",
+            damping: 12,
+            delay: 2,
+          }}
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+          }}
+        >
+          <LightningIcon sx={{ fontSize: 200 }} />
+        </motion.div>
+      </div>
       <ScreenSlide isPresent={isPresent} />
     </Box>
   );
