@@ -14,12 +14,21 @@ export function Home() {
     <Box
       sx={{
         height: "100%",
+        width: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
+        flexDirection: "row",
+        gap: 10,
       }}
     >
-      <BannerText />
+      <Box
+        sx={{
+          maxWidth: 700,
+        }}
+      >
+        <BannerText />
+      </Box>
       <BannerImage />
       <ScreenSlide isPresent={isPresent} />
     </Box>
