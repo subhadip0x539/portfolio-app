@@ -1,24 +1,33 @@
-import { Avatar, Box, Button } from "@mui/material";
-import { motion } from "framer-motion";
-import React, { useState } from "react";
+import { Avatar, Box, Button, Tooltip, Typography } from "@mui/material";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useMemo, useState } from "react";
 import {
+  BashIcon,
   BitBucketIcon,
+  CaptureTheFlagIcon,
   CssIcon,
+  DockerIcon,
   FastApiIcon,
+  FigmaIcon,
   FlaskIcon,
+  FramerIcon,
   GinIcon,
   GitHubIcon,
   GitIcon,
   GoIcon,
   HtmlIcon,
+  JenkinsIcon,
   JiraIcon,
   JsIcon,
   MaterialUiIcon,
+  MongoDbIcon,
+  MySqlIcon,
   PandasIcon,
   PyIcon,
   ReactIcon,
   ReduxIcon,
   ScssIcon,
+  SwaggerIcon,
   TsIcon,
 } from "../../../../global/Icons";
 import { hexToRgba } from "../../../../../utils/methods";
@@ -83,6 +92,14 @@ const skills: {
     icon: <TsIcon />,
   },
   {
+    name: "Bash",
+    key: "sh",
+    description: "",
+    category: "languages",
+    color: "#ffffff",
+    icon: <BashIcon />,
+  },
+  {
     name: "HTML",
     key: "html",
     description: "",
@@ -129,6 +146,14 @@ const skills: {
     category: "frameworks",
     color: "#007fff",
     icon: <MaterialUiIcon />,
+  },
+  {
+    name: "Framer",
+    key: "framer",
+    description: "",
+    category: "frameworks",
+    color: "#00aaff",
+    icon: <FramerIcon />,
   },
   {
     name: "SCSS",
@@ -179,6 +204,38 @@ const skills: {
     icon: <GitHubIcon />,
   },
   {
+    name: "Docker",
+    key: "docker",
+    description: "",
+    category: "others",
+    color: "#2396ed",
+    icon: <DockerIcon />,
+  },
+  {
+    name: "Swagger",
+    key: "swagger",
+    description: "",
+    category: "others",
+    color: "#49A32B",
+    icon: <SwaggerIcon />,
+  },
+  {
+    name: "MongoDB",
+    key: "mongodb",
+    description: "",
+    category: "others",
+    color: "#13AA52",
+    icon: <MongoDbIcon />,
+  },
+  {
+    name: "MySQL",
+    key: "mysql",
+    description: "",
+    category: "others",
+    color: "#00758F",
+    icon: <MySqlIcon />,
+  },
+  {
     name: "JIRA",
     key: "jira",
     description: "",
@@ -194,10 +251,40 @@ const skills: {
     color: "#2684FF",
     icon: <BitBucketIcon />,
   },
+  {
+    name: "Figma",
+    key: "figma",
+    description: "",
+    category: "others",
+    color: "#ffffff",
+    icon: <FigmaIcon />,
+  },
+  {
+    name: "Jenkins",
+    key: "jenkins",
+    description: "",
+    category: "others",
+    color: "#D33833",
+    icon: <JenkinsIcon />,
+  },
+  {
+    name: "Capture The Flag",
+    key: "ctf",
+    description: "",
+    category: "others",
+    color: "#ffffff",
+    icon: <CaptureTheFlagIcon />,
+  },
 ];
 
 export function SkillSection() {
   const [tab, setTab] = useState("all");
+
+  const filteredSkills = useMemo(
+    () =>
+      tab === "all" ? skills : skills.filter((item) => item.category === tab),
+    [tab]
+  );
 
   const handleClick = (params: { key: string }) => {
     const { key } = params;
@@ -208,11 +295,11 @@ export function SkillSection() {
     <Box
       sx={{
         width: "100%",
+        minHeight: 265,
         display: "flex",
         flexDirection: "column",
         gap: 4,
         alignItems: "center",
-        justifyContent: "center",
       }}
     >
       <motion.div
@@ -221,6 +308,7 @@ export function SkillSection() {
         transition={{ delay: 2, duration: 0.5 }}
         style={{
           display: "flex",
+          flexWrap: "wrap",
           gap: 16,
         }}
       >
@@ -256,24 +344,50 @@ export function SkillSection() {
         style={{
           width: "100%",
           display: "flex",
-          alignItems: "center",
+          alignItems: "flex-start",
           justifyContent: "center",
           flexWrap: "wrap",
           gap: 16,
         }}
       >
-        {skills.map((item, _) => (
-          <Avatar
-            key={item.key}
-            sx={{
-              background: hexToRgba(item.color, 0.125),
-              width: 56,
-              height: 56,
-            }}
-          >
-            {React.cloneElement(item.icon, { sx: { fontSize: 24 } })}
-          </Avatar>
-        ))}
+        <AnimatePresence mode="popLayout">
+          {filteredSkills.map((item, _) => (
+            <motion.div
+              layout
+              layoutId={item.key}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0 }}
+              key={item.key}
+            >
+              <Tooltip
+                title={
+                  <>
+                    <Typography
+                      sx={{ color: "text.primary", fontSize: 12, p: 0.5 }}
+                    >
+                      {item.name}
+                    </Typography>
+                  </>
+                }
+              >
+                <Avatar
+                  sx={{
+                    background: hexToRgba(item.color, 0.125),
+                    width: 56,
+                    height: 56,
+                    cursor: "pointer",
+                    ":hover": {
+                      boxShadow: 1,
+                    },
+                  }}
+                >
+                  {React.cloneElement(item.icon, { sx: { fontSize: 24 } })}
+                </Avatar>
+              </Tooltip>
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </motion.div>
     </Box>
   );

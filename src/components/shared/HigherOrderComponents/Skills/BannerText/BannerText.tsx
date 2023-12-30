@@ -11,6 +11,7 @@ export function BannerText() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        justifyContent: "center",
         gap: 30,
       }}
     >
@@ -19,11 +20,13 @@ export function BannerText() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          justifyContent: "center",
         }}
       >
         <Typography
           variant="h2"
           sx={{
+            textAlign: "center",
             wordBreak: "break-word",
             fontWeight: "bold",
             color: "#dfdfd6",
@@ -45,6 +48,7 @@ export function BannerText() {
           variant="h2"
           sx={{
             fontWeight: "bold",
+            textAlign: "center",
             fontFamily: [
               '"Calibre"',
               '"Inter"',

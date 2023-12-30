@@ -14,14 +14,14 @@ export function JiraIcon(props: SvgIconProps) {
         fill="#2684FF"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M349.997 246.515C279.947 178.752 279.605 68.9986 349.235 0.830078L115.088 227.203L242.525 350.46L349.997 246.515Z"
         fill="url(#paint0_linear_104_18)"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M457.28 349.72L350 453.48C383.812 486.165 402.81 530.505 402.81 576.738C402.81 622.973 383.812 667.313 350 699.998L584.72 472.978L457.28 349.72Z"
         fill="url(#paint1_linear_104_18)"
       />
@@ -34,8 +34,8 @@ export function JiraIcon(props: SvgIconProps) {
           y2="219.755"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.18" stop-color="#0052CC" />
-          <stop offset="1" stop-color="#2684FF" />
+          <stop offset="0.18" stopColor="#0052CC" />
+          <stop offset="1" stopColor="#2684FF" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_104_18"
@@ -45,8 +45,8 @@ export function JiraIcon(props: SvgIconProps) {
           y2="479.59"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.18" stop-color="#0052CC" />
-          <stop offset="1" stop-color="#2684FF" />
+          <stop offset="0.18" stopColor="#0052CC" />
+          <stop offset="1" stopColor="#2684FF" />
         </linearGradient>
       </defs>
     </SvgIcon>

@@ -14,8 +14,8 @@ export function BitBucketIcon(props: SvgIconProps) {
         fill="#2684FF"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M669.445 218.408H458.955L423.632 431.368H277.85L105.713 642.36C111.169 647.23 118.125 649.94 125.337 650.003H582.197C593.31 650.15 602.85 641.875 604.627 630.548L669.445 218.408Z"
         fill="url(#paint0_linear_104_25)"
       />
@@ -28,8 +28,8 @@ export function BitBucketIcon(props: SvgIconProps) {
           y2="626.883"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0.18" stop-color="#0052CC" />
-          <stop offset="1" stop-color="#2684FF" />
+          <stop offset="0.18" stopColor="#0052CC" />
+          <stop offset="1" stopColor="#2684FF" />
         </linearGradient>
       </defs>
     </SvgIcon>
