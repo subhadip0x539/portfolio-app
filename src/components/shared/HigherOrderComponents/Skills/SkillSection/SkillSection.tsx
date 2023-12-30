@@ -30,6 +30,7 @@ import {
   ScssIcon,
   SwaggerIcon,
   TsIcon,
+  NginxIcon,
 } from "../../../../global/Icons";
 import { hexToRgba } from "../../../../../utils/methods";
 
@@ -275,6 +276,14 @@ const skills: {
     category: "others",
     color: "#FF6600",
     icon: <RabbitMqIcon />,
+  },
+  {
+    name: "Nginx",
+    key: "nginx",
+    description: "",
+    category: "others",
+    color: "#009639",
+    icon: <NginxIcon />,
   },
   {
     name: "CTF",
