@@ -19,7 +19,7 @@ export function ScreenSlide(props: IScreenSlideProps) {
         left: 0,
         right: 0,
         bottom: 0,
-        background: "var(--slide-screen-bg)",
+        background: "var(--screen-slide-bg)",
         zIndex: 2,
       }}
     />

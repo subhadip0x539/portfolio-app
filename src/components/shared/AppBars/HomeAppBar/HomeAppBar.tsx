@@ -69,7 +69,6 @@ export function HomeAppBar() {
               <LogoIcon />
               <Typography
                 sx={{
-                  fontFamily: ['"Roboto Mono"', "monoscape"].join(","),
                   color: "text.secondary",
                 }}
               >
@@ -88,7 +87,6 @@ export function HomeAppBar() {
                 <Typography
                   key={index}
                   sx={{
-                    fontFamily: ['"Roboto Mono"', "monoscape"].join(","),
                     cursor: "pointer",
                     color: "text.secondary",
                     transition: "color 0.3s",

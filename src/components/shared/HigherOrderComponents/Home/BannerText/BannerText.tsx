@@ -43,13 +43,13 @@ export function BannerText() {
       style={{
         display: "flex",
         flexDirection: "column",
+        alignItems: "flex-start",
         gap: 30,
       }}
     >
       <Typography
         variant="h6"
         sx={{
-          fontFamily: ['"Roboto Mono"', "monoscape"].join(","),
           color: "primary.main",
         }}
       >
@@ -62,6 +62,15 @@ export function BannerText() {
             wordBreak: "break-word",
             fontWeight: "bold",
             color: "#dfdfd6",
+            fontFamily: [
+              '"Calibre"',
+              '"Inter"',
+              '"San Francisco"',
+              '"SF Pro Text"',
+              "-apple-system",
+              "system-ui",
+              "sans-serif",
+            ].join(","),
           }}
         >
           Subhadip Biswas
@@ -69,7 +78,18 @@ export function BannerText() {
         <Typography
           className="text-clip"
           variant="h2"
-          sx={{ fontWeight: "bold" }}
+          sx={{
+            fontWeight: "bold",
+            fontFamily: [
+              '"Calibre"',
+              '"Inter"',
+              '"San Francisco"',
+              '"SF Pro Text"',
+              "-apple-system",
+              "system-ui",
+              "sans-serif",
+            ].join(","),
+          }}
         >
           Building stuffs on the web.
         </Typography>
@@ -77,10 +97,8 @@ export function BannerText() {
       <Typography
         sx={{
           color: "text.secondary",
-          maxWidth: 650,
           fontWeight: 100,
           fontSize: 15,
-          fontFamily: ['"Roboto Mono"', "monoscape"].join(","),
         }}
       >
         I am a{" "}
@@ -101,7 +119,7 @@ export function BannerText() {
           mt: 3,
           display: "flex",
           alignItems: "center",
-          gap: 3,
+          gap: 2,
         }}
       >
         <Button
@@ -118,6 +136,19 @@ export function BannerText() {
         >
           Resume
         </Button>
+        {/* <Button
+          variant="outlined"
+          color="primary"
+          sx={{
+            borderRadius: 8,
+            textTransform: "none",
+            px: 3,
+            fontSize: 12,
+            fontFamily: ['"Roboto Mono"', "monoscape"].join(","),
+          }}
+        >
+          💡 Book Meeting
+        </Button> */}
         <Box
           sx={{
             display: "flex",

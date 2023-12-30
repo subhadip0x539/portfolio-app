@@ -17,9 +17,8 @@ export function BannerImage() {
         style={{
           height: 200,
           width: 200,
-          background: "linear-gradient( -45deg, #bd34fe 50%, #47caff 50% )",
-          filter: "blur(90px)",
-          animation: "glow 1s ease-in-out infinite alternate",
+          background: "var(--banner-image-bg)",
+          filter: "blur(100px)",
         }}
       />
       <motion.div
