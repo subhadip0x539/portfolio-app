@@ -53,14 +53,7 @@ const tabs: { name: string; key: string }[] = [
   },
 ];
 
-const skills: {
-  name: string;
-  key: string;
-  description: string;
-  category: string;
-  color: string;
-  icon: JSX.Element;
-}[] = [
+const skills: { name: string; key: string; description: string; category: string; color: string; icon: JSX.Element }[] = [
   {
     name: "Go",
     key: "go",
@@ -295,14 +288,10 @@ const skills: {
   },
 ];
 
-export function SkillSection() {
+export function SkillsContent() {
   const [tab, setTab] = useState("all");
 
-  const filteredSkills = useMemo(
-    () =>
-      tab === "all" ? skills : skills.filter((item) => item.category === tab),
-    [tab]
-  );
+  const filteredSkills = useMemo(() => (tab === "all" ? skills : skills.filter((item) => item.category === tab)), [tab]);
 
   const handleClick = (params: { key: string }) => {
     const { key } = params;
@@ -313,7 +302,6 @@ export function SkillSection() {
     <Box
       sx={{
         width: "100%",
-        minHeight: 337,
         display: "flex",
         flexDirection: "column",
         gap: 4,
@@ -321,9 +309,6 @@ export function SkillSection() {
       }}
     >
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 0.5 }}
         style={{
           display: "flex",
           flexWrap: "wrap",
@@ -356,9 +341,6 @@ export function SkillSection() {
         ))}
       </motion.div>
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 0.5 }}
         style={{
           width: "100%",
           display: "flex",
@@ -370,22 +352,11 @@ export function SkillSection() {
       >
         <AnimatePresence mode="popLayout">
           {filteredSkills.map((item, _) => (
-            <motion.div
-              layout
-              layoutId={item.key}
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0 }}
-              key={item.key}
-            >
+            <motion.div layout layoutId={item.key} initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} key={item.key}>
               <Tooltip
                 title={
                   <>
-                    <Typography
-                      sx={{ color: "text.primary", fontSize: 12, p: 0.5 }}
-                    >
-                      {item.name}
-                    </Typography>
+                    <Typography sx={{ color: "text.primary", fontSize: 12, p: 0.5 }}>{item.name}</Typography>
                   </>
                 }
               >

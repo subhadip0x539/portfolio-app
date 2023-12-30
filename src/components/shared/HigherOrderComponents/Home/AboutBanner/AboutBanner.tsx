@@ -32,7 +32,7 @@ const socialLinks: {
   },
 ];
 
-export function BannerText() {
+export function AboutBanner() {
   const theme = useTheme();
 
   return (
@@ -45,6 +45,7 @@ export function BannerText() {
         flexDirection: "column",
         alignItems: "flex-start",
         gap: 30,
+        maxWidth: 700,
       }}
     >
       <Typography
@@ -62,15 +63,7 @@ export function BannerText() {
             wordBreak: "break-word",
             fontWeight: "bold",
             color: "#dfdfd6",
-            fontFamily: [
-              '"Calibre"',
-              '"Inter"',
-              '"San Francisco"',
-              '"SF Pro Text"',
-              "-apple-system",
-              "system-ui",
-              "sans-serif",
-            ].join(","),
+            fontFamily: ['"Calibre"', '"Inter"', '"San Francisco"', '"SF Pro Text"', "-apple-system", "system-ui", "sans-serif"].join(","),
           }}
         >
           Subhadip Biswas
@@ -80,15 +73,7 @@ export function BannerText() {
           variant="h2"
           sx={{
             fontWeight: "bold",
-            fontFamily: [
-              '"Calibre"',
-              '"Inter"',
-              '"San Francisco"',
-              '"SF Pro Text"',
-              "-apple-system",
-              "system-ui",
-              "sans-serif",
-            ].join(","),
+            fontFamily: ['"Calibre"', '"Inter"', '"San Francisco"', '"SF Pro Text"', "-apple-system", "system-ui", "sans-serif"].join(","),
           }}
         >
           Building stuffs on the web.
@@ -101,18 +86,8 @@ export function BannerText() {
           fontSize: 15,
         }}
       >
-        I am a{" "}
-        <span style={{ color: theme?.palette?.warning?.main }}>
-          Full Stack Developer
-        </span>{" "}
-        and{" "}
-        <span style={{ color: theme?.palette?.warning?.main }}>
-          Cybersecurity Enthusiast
-        </span>
-        , I combine technical expertise with a security-focused mindset to
-        deliver innovative solutions. With proficiency in various programming
-        languages and frameworks, I'm always seeking out new technologies to
-        improve my skills.
+        I am a <span style={{ color: theme?.palette?.warning?.main }}>Full Stack Developer</span> and <span style={{ color: theme?.palette?.warning?.main }}>Cybersecurity Enthusiast</span>, I combine technical expertise with a
+        security-focused mindset to deliver innovative solutions. With proficiency in various programming languages and frameworks, I'm always seeking out new technologies to improve my skills.
       </Typography>
       <Box
         sx={{
@@ -157,12 +132,7 @@ export function BannerText() {
           }}
         >
           {socialLinks.map((item, index) => (
-            <IconButton
-              key={index}
-              href={item.link}
-              size="medium"
-              sx={{ border: 0.5, borderColor: "divider" }}
-            >
+            <IconButton key={index} href={item.link} size="medium" sx={{ border: 0.5, borderColor: "divider" }}>
               {item.icon}
             </IconButton>
           ))}

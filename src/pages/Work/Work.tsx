@@ -1,30 +1,26 @@
 import { Box, Container } from "@mui/material";
-import { useIsPresent } from "framer-motion";
 import { ScreenSlide } from "../../components/shared/Slides";
+import { useIsPresent } from "framer-motion";
+import { ProjectsSection, SkillsSection } from "../../components/shared/HigherOrderComponents/Work";
 
-import { AboutSection } from "../../components/shared/HigherOrderComponents/Home";
-
-export function Home() {
+export function Work() {
   const isPresent = useIsPresent();
 
   return (
-    <Container
-      sx={{
-        height: "100%",
-      }}
-    >
+    <Container>
       <Box
         sx={{
-          height: "100%",
           width: "100%",
+          height: "100%",
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
-          flexDirection: "row",
+          flexDirection: "column",
           gap: 10,
+          py: 10,
         }}
       >
-        <AboutSection />
+        <ProjectsSection />
+        <SkillsSection />
         <ScreenSlide isPresent={isPresent} />
       </Box>
     </Container>

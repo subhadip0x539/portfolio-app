@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export function BannerImage() {
+export function AboutContent() {
   return (
     <div
       style={{

@@ -10,8 +10,8 @@ const links: { name: string; path: string; index: boolean }[] = [
     index: true,
   },
   {
-    name: "Skills",
-    path: "skills",
+    name: "Work",
+    path: "work",
     index: false,
   },
   {
@@ -19,11 +19,6 @@ const links: { name: string; path: string; index: boolean }[] = [
     path: "experience",
     index: false,
   },
-  // {
-  //   name: "About",
-  //   path: "about",
-  //   index: false,
-  // },
   {
     name: "Contact",
     path: "contact",
