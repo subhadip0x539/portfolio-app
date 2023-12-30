@@ -24,6 +24,7 @@ import {
   MySqlIcon,
   PandasIcon,
   PyIcon,
+  RabbitMqIcon,
   ReactIcon,
   ReduxIcon,
   ScssIcon,
@@ -266,6 +267,14 @@ const skills: {
     category: "others",
     color: "#D33833",
     icon: <JenkinsIcon />,
+  },
+  {
+    name: "RabbitMQ",
+    key: "rabbitmq",
+    description: "",
+    category: "others",
+    color: "#FF6600",
+    icon: <RabbitMqIcon />,
   },
   {
     name: "Capture The Flag",

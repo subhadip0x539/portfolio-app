@@ -26,3 +26,4 @@ export { MongoDbIcon } from "./MongoDbIcon/MongoDbIcon";
 export { MySqlIcon } from "./MySqlIcon/MySqlIcon";
 export { CaptureTheFlagIcon } from "./CaptureTheFlagIcon/CaptureTheFlagIcon";
 export { SwaggerIcon } from "./SwaggerIcon/SwaggerIcon";
+export { RabbitMqIcon } from "./RabbitMqIcon/RabbitMqIcon";
