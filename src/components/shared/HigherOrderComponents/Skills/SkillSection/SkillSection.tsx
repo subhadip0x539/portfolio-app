@@ -4,7 +4,7 @@ import React, { useMemo, useState } from "react";
 import {
   BashIcon,
   BitBucketIcon,
-  CaptureTheFlagIcon,
+  CtfIcon,
   CssIcon,
   DockerIcon,
   FastApiIcon,
@@ -277,12 +277,12 @@ const skills: {
     icon: <RabbitMqIcon />,
   },
   {
-    name: "Capture The Flag",
+    name: "CTF",
     key: "ctf",
     description: "",
     category: "others",
     color: "#ffffff",
-    icon: <CaptureTheFlagIcon />,
+    icon: <CtfIcon />,
   },
 ];
 
@@ -304,7 +304,7 @@ export function SkillSection() {
     <Box
       sx={{
         width: "100%",
-        minHeight: 265,
+        minHeight: 337,
         display: "flex",
         flexDirection: "column",
         gap: 4,

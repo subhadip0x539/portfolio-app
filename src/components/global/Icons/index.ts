@@ -24,6 +24,6 @@ export { BashIcon } from "./BashIcon/BashIcon";
 export { DockerIcon } from "./DockerIcon/DockerIcon";
 export { MongoDbIcon } from "./MongoDbIcon/MongoDbIcon";
 export { MySqlIcon } from "./MySqlIcon/MySqlIcon";
-export { CaptureTheFlagIcon } from "./CaptureTheFlagIcon/CaptureTheFlagIcon";
+export { CtfIcon } from "./CtfIcon/CtfIcon";
 export { SwaggerIcon } from "./SwaggerIcon/SwaggerIcon";
 export { RabbitMqIcon } from "./RabbitMqIcon/RabbitMqIcon";

@@ -1,6 +1,6 @@
 import { SvgIcon, SvgIconProps } from "@mui/material";
 
-export function CaptureTheFlagIcon(props: SvgIconProps) {
+export function CtfIcon(props: SvgIconProps) {
   return (
     <SvgIcon width="18" height="24" viewBox="0 0 18 24" fill="none" {...props}>
       <path
