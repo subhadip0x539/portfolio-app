@@ -31,6 +31,7 @@ import {
   TypeScriptIcon,
   NginxIcon,
   PythonIcon,
+  ElasticIcon,
 } from "../../../../global/Icons";
 import { Badge } from "../../../Badges";
 
@@ -277,6 +278,14 @@ const skills: { name: string; key: string; description: string; category: string
     category: "others",
     color: "#009639",
     icon: <NginxIcon />,
+  },
+  {
+    name: "ELK Stack",
+    key: "elastic",
+    description: "",
+    category: "others",
+    color: "#24BBB1",
+    icon: <ElasticIcon />,
   },
   {
     name: "CTF",

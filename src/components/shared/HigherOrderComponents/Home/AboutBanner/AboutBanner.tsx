@@ -62,7 +62,6 @@ export function AboutBanner() {
           sx={{
             wordBreak: "break-word",
             fontWeight: "bold",
-            color: "#dfdfd6",
             fontFamily: ['"Calibre"', '"Inter"', '"San Francisco"', '"SF Pro Text"', "-apple-system", "system-ui", "sans-serif"].join(","),
           }}
         >
@@ -76,7 +75,7 @@ export function AboutBanner() {
             fontFamily: ['"Calibre"', '"Inter"', '"San Francisco"', '"SF Pro Text"', "-apple-system", "system-ui", "sans-serif"].join(","),
           }}
         >
-          Building stuffs on the web.
+          Building Stuffs on the Web
         </Typography>
       </Box>
       <Typography
@@ -86,8 +85,10 @@ export function AboutBanner() {
           fontSize: 14,
         }}
       >
-        I am a <span style={{ color: theme?.palette?.warning?.main }}>Full Stack Developer</span> and <span style={{ color: theme?.palette?.warning?.main }}>Cybersecurity Enthusiast</span>, I combine technical expertise with a
-        security-focused mindset to deliver innovative solutions. With proficiency in various programming languages and frameworks, I'm always seeking out new technologies to improve my skills.
+        I am a <span style={{ color: theme?.palette?.warning?.main }}>Full Stack Developer</span> and{" "}
+        <span style={{ color: theme?.palette?.warning?.main }}>Cybersecurity Enthusiast</span>, I combine technical expertise with a security-focused mindset to
+        deliver innovative solutions. With proficiency in various programming languages and frameworks, I'm always seeking out new technologies to improve my
+        skills.
       </Typography>
       <Box
         sx={{

@@ -28,3 +28,4 @@ export { CtfIcon } from "./CtfIcon/CtfIcon";
 export { SwaggerIcon } from "./SwaggerIcon/SwaggerIcon";
 export { RabbitMqIcon } from "./RabbitMqIcon/RabbitMqIcon";
 export { NginxIcon } from "./NginxIcon/NginxIcon";
+export { ElasticIcon } from "./ElasticIcon/ElasticIcon";
