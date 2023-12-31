@@ -44,7 +44,7 @@ export function HomeAppBar() {
         boxShadow: "none",
       }}
     >
-      <Toolbar sx={{ px: "0!important" }}>
+      <Toolbar sx={{ px: "8px!important" }}>
         <Container>
           <Box
             sx={{
@@ -82,14 +82,14 @@ export function HomeAppBar() {
                 <Typography
                   key={index}
                   sx={{
+                    fontSize: 14,
                     cursor: "pointer",
                     color: "text.secondary",
                     transition: "color 0.3s",
                     ...(matchPath(pathname, `/${item.path}`) && {
                       color: "primary.main",
                     }),
-                    ...(item.index &&
-                      matchPath(pathname, `/`) && { color: "primary.main" }),
+                    ...(item.index && matchPath(pathname, `/`) && { color: "primary.main" }),
                     ":hover": { color: "primary.main" },
                   }}
                   onClick={() => {

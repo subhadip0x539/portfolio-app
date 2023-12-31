@@ -83,7 +83,7 @@ export function AboutBanner() {
         sx={{
           color: "text.secondary",
           fontWeight: 100,
-          fontSize: 15,
+          fontSize: 14,
         }}
       >
         I am a <span style={{ color: theme?.palette?.warning?.main }}>Full Stack Developer</span> and <span style={{ color: theme?.palette?.warning?.main }}>Cybersecurity Enthusiast</span>, I combine technical expertise with a
@@ -105,7 +105,7 @@ export function AboutBanner() {
             borderRadius: 8,
             textTransform: "none",
             px: 3,
-            fontSize: 12,
+            fontSize: 14,
             fontFamily: ['"Roboto Mono"', "monoscape"].join(","),
           }}
         >

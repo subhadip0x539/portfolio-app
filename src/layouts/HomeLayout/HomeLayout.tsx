@@ -20,6 +20,8 @@ export function HomeLayout() {
           sx={{
             flex: 1,
             overflow: "auto",
+            scrollbarGutter: "stable",
+            pl: 1,
           }}
         >
           <Outlet />

@@ -15,7 +15,7 @@ export function Work() {
           display: "flex",
           alignItems: "center",
           flexDirection: "column",
-          gap: 10,
+          gap: 20,
           py: 10,
         }}
       >

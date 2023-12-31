@@ -21,7 +21,7 @@ export function Home() {
           alignItems: "center",
           justifyContent: "space-between",
           flexDirection: "row",
-          gap: 10,
+          // gap: 20,
         }}
       >
         <AboutSection />
