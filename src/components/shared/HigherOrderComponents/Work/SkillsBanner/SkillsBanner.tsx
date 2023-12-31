@@ -26,7 +26,6 @@ export function SkillsBanner() {
             textAlign: "center",
             wordBreak: "break-word",
             fontWeight: "bold",
-            color: "#dfdfd6",
             fontFamily: ['"Calibre"', '"Inter"', '"San Francisco"', '"SF Pro Text"', "-apple-system", "system-ui", "sans-serif"].join(","),
           }}
         >

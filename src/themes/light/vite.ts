@@ -1,6 +1,6 @@
 import { Theme } from "@emotion/react";
 import { createTheme } from "@mui/material/styles";
-import { common } from "./common";
+import { common } from "../common/common";
 
 const vite: Theme = createTheme({
   ...common,
@@ -17,13 +17,13 @@ const vite: Theme = createTheme({
     },
   },
   palette: {
-    mode: "dark",
+    mode: "light",
     primary: {
       main: "#646cff",
     },
     background: {
-      default: "#1b1b1f",
-      paper: "#202127",
+      default: "#ffffff",
+      paper: "#f6f6f7",
     },
   },
 });

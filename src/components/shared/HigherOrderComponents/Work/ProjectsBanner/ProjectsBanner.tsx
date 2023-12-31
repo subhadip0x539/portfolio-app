@@ -27,7 +27,6 @@ export function ProjectsBanner() {
             textAlign: "center",
             wordBreak: "break-word",
             fontWeight: "bold",
-            color: "#dfdfd6",
             fontFamily: ['"Calibre"', '"Inter"', '"San Francisco"', '"SF Pro Text"', "-apple-system", "system-ui", "sans-serif"].join(","),
           }}
         >
@@ -61,7 +60,7 @@ export function ProjectsBanner() {
           textAlign: "center",
         }}
       >
-        Trying to learn something about everything and <br /> everything about something
+        Some of my featured projects
       </Typography>
     </motion.div>
   );

@@ -1,5 +1,7 @@
-import { Box, Typography } from "@mui/material";
+import { Box, IconButton, Typography } from "@mui/material";
 import PortfolioAppImg from "../../../../../assets/portfolio-app.png";
+import ginMicroserviceBoilerplateImg from "../../../../../assets/gin-microservice-boilerplate.png";
+import fileIntegrityMonitorImg from "../../../../../assets/file-integrity-monitor.png";
 import {
   CssIcon,
   DockerIcon,
@@ -16,11 +18,24 @@ import {
   TypeScriptIcon,
 } from "../../../../global/Icons";
 import { Badge } from "../../../Badges";
+import { OpenInNewRounded } from "@mui/icons-material";
+import { GitHub } from "@mui/icons-material";
 
-const projects: { name: string; key: string; description: string; skills: { name: string; icon: JSX.Element; color: string }[] }[] = [
+const projects: {
+  name: string;
+  key: string;
+  description: string;
+  skills: { name: string; icon: JSX.Element; color: string }[];
+  gitHubLink: string;
+  projectLink: string;
+  image: string;
+}[] = [
   {
     name: "Portfolio Website",
     key: "portfolio-website",
+    gitHubLink: "https://github.com/subhadip0x539/portfolio-app",
+    image: PortfolioAppImg,
+    projectLink: "",
     description:
       "This website is a representation of my online presence and a hub for information about my background, projects, and achievements. The design is aimed at providing a clean and user-friendly experience.",
     skills: [
@@ -64,6 +79,9 @@ const projects: { name: string; key: string; description: string; skills: { name
   {
     name: "Gin Based Microservice Boilerplate",
     key: "gin-microservice-boilerplate",
+    gitHubLink: "https://github.com/subhadip0x539/gin-microservice-boilerplate",
+    projectLink: "",
+    image: ginMicroserviceBoilerplateImg,
     description:
       "This is a simple and lightweight boilerplate for building microservices using the Go programming language and the Gin web framework. It includes basic configurations and structure to kickstart your microservices development.",
     skills: [
@@ -87,6 +105,9 @@ const projects: { name: string; key: string; description: string; skills: { name
   {
     name: "File Integrity Monitor",
     key: "file-integrity-monitor",
+    gitHubLink: "https://github.com/subhadip0x539/file-integrity-monitor",
+    projectLink: "",
+    image: fileIntegrityMonitorImg,
     description:
       "This is a security tool designed to monitor and detect unauthorized changes to files and directories on a system. It provides a crucial layer of defense against malicious activities, ensuring the integrity of critical system files and sensitive data.",
     skills: [
@@ -165,8 +186,9 @@ export function ProjectsContent() {
                 height: "100%",
                 width: "100%",
                 background: (theme) => theme.palette.primary.main,
-                // background: "#ffffff",
-                filter: "blur(50px)",
+                borderRadius: 1,
+                // background: "#0a192f",
+                // filter: "blur(50px)",
                 opacity: 0.25,
                 transition: "opacity 0.3s ease",
                 ":hover": {
@@ -174,7 +196,7 @@ export function ProjectsContent() {
                 },
               }}
             />
-            <img src={PortfolioAppImg} style={{ width: "100%", height: "auto", display: "block", objectFit: "cover", borderRadius: 8 }} />
+            <img src={item.image} style={{ width: "100%", height: "auto", display: "block", objectFit: "cover", borderRadius: 8 }} />
           </Box>
           <Box
             sx={{
@@ -192,7 +214,6 @@ export function ProjectsContent() {
               sx={{
                 wordBreak: "break-word",
                 fontWeight: "bold",
-                color: "#dfdfd6",
                 fontFamily: ['"Calibre"', '"Inter"', '"San Francisco"', '"SF Pro Text"', "-apple-system", "system-ui", "sans-serif"].join(","),
               }}
             >
@@ -221,8 +242,20 @@ export function ProjectsContent() {
             <Box
               sx={{
                 display: "flex",
+                gap: 1,
               }}
-            ></Box>
+            >
+              {item.projectLink !== "" && (
+                <IconButton size="medium" href={item.projectLink}>
+                  <OpenInNewRounded fontSize="inherit" />
+                </IconButton>
+              )}
+              {item.gitHubLink !== "" && (
+                <IconButton size="medium" href={item.gitHubLink}>
+                  <GitHub fontSize="inherit" />
+                </IconButton>
+              )}
+            </Box>
           </Box>
         </Box>
       ))}
