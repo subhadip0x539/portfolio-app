@@ -1,15 +1,8 @@
 import { SvgIcon, SvgIconProps } from "@mui/material";
 
-export function JsIcon(props: SvgIconProps) {
+export function JavaScriptIcon(props: SvgIconProps) {
   return (
-    <SvgIcon
-      width="800px"
-      height="800px"
-      viewBox="0 0 256 256"
-      version="1.1"
-      preserveAspectRatio="xMidYMid"
-      {...props}
-    >
+    <SvgIcon width="800px" height="800px" viewBox="0 0 256 256" version="1.1" preserveAspectRatio="xMidYMid" {...props}>
       <g>
         <path d="M0,0 L256,0 L256,256 L0,256 L0,0 Z" fill="#F7DF1E"></path>
         <path

@@ -1,14 +1,8 @@
 import { SvgIcon, SvgIconProps } from "@mui/material";
 
-export function PyIcon(props: SvgIconProps) {
+export function PythonIcon(props: SvgIconProps) {
   return (
-    <SvgIcon
-      width="800px"
-      height="800px"
-      viewBox="0 0 32 32"
-      fill="none"
-      {...props}
-    >
+    <SvgIcon width="800px" height="800px" viewBox="0 0 32 32" fill="none" {...props}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -22,25 +16,11 @@ export function PyIcon(props: SvgIconProps) {
         fill="url(#paint1_linear_87_8204)"
       />
       <defs>
-        <linearGradient
-          id="paint0_linear_87_8204"
-          x1="12.4809"
-          y1="2"
-          x2="12.4809"
-          y2="22.7407"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="paint0_linear_87_8204" x1="12.4809" y1="2" x2="12.4809" y2="22.7407" gradientUnits="userSpaceOnUse">
           <stop stopColor="#327EBD" />
           <stop offset="1" stopColor="#1565A7" />
         </linearGradient>
-        <linearGradient
-          id="paint1_linear_87_8204"
-          x1="19.519"
-          y1="9.25928"
-          x2="19.519"
-          y2="30"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="paint1_linear_87_8204" x1="19.519" y1="9.25928" x2="19.519" y2="30" gradientUnits="userSpaceOnUse">
           <stop stopColor="#FFDA4B" />
           <stop offset="1" stopColor="#F9C600" />
         </linearGradient>

@@ -1,7 +1,7 @@
 export { LogoIcon } from "./LogoIcon/LogoIcon";
 export { GoIcon } from "./GoIcon/GoIcon";
-export { JsIcon } from "./JsIcon/JsIcon";
-export { PyIcon } from "./PyIcon/PyIcon";
+export { JavaScriptIcon } from "./JavaScriptIcon/JavaScriptIcon";
+export { PythonIcon } from "./PythonIcon/PythonIcon";
 export { HtmlIcon } from "./HtmlIcon/HtmlIcon";
 export { TypeScriptIcon } from "./TypeScriptIcon/TypeScriptIcon";
 export { CssIcon } from "./CssIcon/CssIcon";

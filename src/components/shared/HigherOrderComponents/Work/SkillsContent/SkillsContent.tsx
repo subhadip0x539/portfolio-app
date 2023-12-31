@@ -18,12 +18,11 @@ import {
   HtmlIcon,
   JenkinsIcon,
   JiraIcon,
-  JsIcon,
+  JavaScriptIcon,
   MaterialUiIcon,
   MongoDbIcon,
   MySqlIcon,
   PandasIcon,
-  PyIcon,
   RabbitMqIcon,
   ReactIcon,
   ReduxIcon,
@@ -31,6 +30,7 @@ import {
   SwaggerIcon,
   TypeScriptIcon,
   NginxIcon,
+  PythonIcon,
 } from "../../../../global/Icons";
 import { Badge } from "../../../Badges";
 
@@ -68,7 +68,7 @@ const skills: { name: string; key: string; description: string; category: string
     description: "",
     category: "languages",
     color: "#f7df1e",
-    icon: <JsIcon />,
+    icon: <JavaScriptIcon />,
   },
   {
     name: "Python",
@@ -76,7 +76,7 @@ const skills: { name: string; key: string; description: string; category: string
     description: "",
     category: "languages",
     color: "#2673b4",
-    icon: <PyIcon />,
+    icon: <PythonIcon />,
   },
   {
     name: "TypeScript",

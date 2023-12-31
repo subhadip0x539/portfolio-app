@@ -1,6 +1,20 @@
 import { Box, Typography } from "@mui/material";
 import PortfolioAppImg from "../../../../../assets/portfolio-app.png";
-import { MaterialUiIcon, ReactIcon, TypeScriptIcon } from "../../../../global/Icons";
+import {
+  CssIcon,
+  DockerIcon,
+  FlaskIcon,
+  FramerIcon,
+  GinIcon,
+  GoIcon,
+  HtmlIcon,
+  JavaScriptIcon,
+  MaterialUiIcon,
+  PythonIcon,
+  ReactIcon,
+  ScssIcon,
+  TypeScriptIcon,
+} from "../../../../global/Icons";
 import { Badge } from "../../../Badges";
 
 const projects: { name: string; key: string; description: string; skills: { name: string; icon: JSX.Element; color: string }[] }[] = [
@@ -16,6 +30,16 @@ const projects: { name: string; key: string; description: string; skills: { name
         color: "#007acc",
       },
       {
+        name: "HTML",
+        icon: <HtmlIcon />,
+        color: "#f16529",
+      },
+      {
+        name: "CSS",
+        icon: <CssIcon />,
+        color: "#1172b8",
+      },
+      {
         name: "React",
         icon: <ReactIcon />,
         color: "#007acc",
@@ -25,21 +49,88 @@ const projects: { name: string; key: string; description: string; skills: { name
         icon: <MaterialUiIcon />,
         color: "#007fff",
       },
+      {
+        name: "Framer",
+        color: "#00aaff",
+        icon: <FramerIcon />,
+      },
+      {
+        name: "SCSS",
+        icon: <ScssIcon />,
+        color: "#cd6799",
+      },
     ],
   },
   {
     name: "Gin Based Microservice Boilerplate",
     key: "gin-microservice-boilerplate",
     description:
-      "This website is a representation of my online presence and a hub for information about my background, projects, and achievements. The design is aimed at providing a clean and user-friendly experience.",
-    skills: [],
+      "This is a simple and lightweight boilerplate for building microservices using the Go programming language and the Gin web framework. It includes basic configurations and structure to kickstart your microservices development.",
+    skills: [
+      {
+        name: "Go",
+        icon: <GoIcon />,
+        color: "#79d4fd",
+      },
+      {
+        name: "Gin",
+        icon: <GinIcon />,
+        color: "#0090d1",
+      },
+      {
+        name: "Docker",
+        color: "#2396ed",
+        icon: <DockerIcon />,
+      },
+    ],
   },
   {
     name: "File Integrity Monitor",
     key: "file-integrity-monitor",
     description:
-      "This website is a representation of my online presence and a hub for information about my background, projects, and achievements. The design is aimed at providing a clean and user-friendly experience.",
-    skills: [],
+      "This is a security tool designed to monitor and detect unauthorized changes to files and directories on a system. It provides a crucial layer of defense against malicious activities, ensuring the integrity of critical system files and sensitive data.",
+    skills: [
+      {
+        name: "Python",
+        icon: <PythonIcon />,
+        color: "#2673b4",
+      },
+      {
+        name: "JavaScript",
+        icon: <JavaScriptIcon />,
+        color: "#f7df1e",
+      },
+      {
+        name: "HTML",
+        icon: <HtmlIcon />,
+        color: "#f16529",
+      },
+      {
+        name: "CSS",
+        icon: <CssIcon />,
+        color: "#1172b8",
+      },
+      {
+        name: "Flask",
+        icon: <FlaskIcon />,
+        color: "#ffffff",
+      },
+      {
+        name: "React",
+        icon: <ReactIcon />,
+        color: "#007acc",
+      },
+      {
+        name: "MaterialUI",
+        icon: <MaterialUiIcon />,
+        color: "#007fff",
+      },
+      {
+        name: "SCSS",
+        icon: <ScssIcon />,
+        color: "#cd6799",
+      },
+    ],
   },
 ];
 
@@ -49,7 +140,7 @@ export function ProjectsContent() {
       sx={{
         display: "flex",
         flexDirection: "column",
-        gap: 4,
+        gap: 8,
         width: "100%",
       }}
     >
@@ -73,10 +164,10 @@ export function ProjectsContent() {
                 position: "absolute",
                 height: "100%",
                 width: "100%",
-                // background: (theme) => theme.palette.primary.main,
-                background: "#ffffff",
+                background: (theme) => theme.palette.primary.main,
+                // background: "#ffffff",
                 filter: "blur(50px)",
-                opacity: 0.125,
+                opacity: 0.25,
                 transition: "opacity 0.3s ease",
                 ":hover": {
                   opacity: 0,
@@ -115,18 +206,23 @@ export function ProjectsContent() {
                 display: "flex",
                 flexDirection: "column",
                 gap: 2,
-                alignItems: "flex-end",
+                alignItems: (index + 1) % 2 === 0 ? "flex-start" : "flex-end",
               }}
             >
               <Typography sx={{ fontSize: 14, color: "text.secondary", textAlign: (index + 1) % 2 === 0 ? "left" : "right" }}>{item.description}</Typography>
               {item.skills.length > 0 && (
                 <Box sx={{ display: "flex", gap: 1 }}>
                   {item.skills.map((skill, index) => (
-                    <Badge key={index} title={skill.name} height={40} width={40} color={skill.color} fontSize={12} children={skill.icon} />
+                    <Badge key={index} title={skill.name} height={32} width={32} color={skill.color} fontSize={14} children={skill.icon} />
                   ))}
                 </Box>
               )}
             </Box>
+            <Box
+              sx={{
+                display: "flex",
+              }}
+            ></Box>
           </Box>
         </Box>
       ))}
