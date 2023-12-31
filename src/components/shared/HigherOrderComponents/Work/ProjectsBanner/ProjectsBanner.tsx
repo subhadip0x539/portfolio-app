@@ -22,6 +22,7 @@ export function ProjectsBanner() {
       >
         <Typography
           variant="h2"
+          className="text-clip"
           sx={{
             textAlign: "center",
             wordBreak: "break-word",

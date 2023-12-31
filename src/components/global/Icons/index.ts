@@ -3,7 +3,7 @@ export { GoIcon } from "./GoIcon/GoIcon";
 export { JsIcon } from "./JsIcon/JsIcon";
 export { PyIcon } from "./PyIcon/PyIcon";
 export { HtmlIcon } from "./HtmlIcon/HtmlIcon";
-export { TsIcon } from "./TsIcon/TsIcon";
+export { TypeScriptIcon } from "./TypeScriptIcon/TypeScriptIcon";
 export { CssIcon } from "./CssIcon/CssIcon";
 export { GinIcon } from "./GinIcon/GinIcon";
 export { FastApiIcon } from "./FastApiIcon/FastApiIcon";

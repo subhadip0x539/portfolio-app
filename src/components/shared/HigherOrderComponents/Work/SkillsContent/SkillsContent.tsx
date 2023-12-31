@@ -1,6 +1,6 @@
-import { Avatar, Box, Button, Tooltip, Typography } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import {
   BashIcon,
   BitBucketIcon,
@@ -29,10 +29,10 @@ import {
   ReduxIcon,
   ScssIcon,
   SwaggerIcon,
-  TsIcon,
+  TypeScriptIcon,
   NginxIcon,
 } from "../../../../global/Icons";
-import { hexToRgba } from "../../../../../utils/methods";
+import { Badge } from "../../../Badges";
 
 const tabs: { name: string; key: string }[] = [
   {
@@ -84,7 +84,7 @@ const skills: { name: string; key: string; description: string; category: string
     description: "",
     category: "languages",
     color: "#007acc",
-    icon: <TsIcon />,
+    icon: <TypeScriptIcon />,
   },
   {
     name: "Bash",
@@ -352,28 +352,15 @@ export function SkillsContent() {
       >
         <AnimatePresence mode="popLayout">
           {filteredSkills.map((item, _) => (
-            <motion.div layout layoutId={item.key} initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} key={item.key}>
-              <Tooltip
-                title={
-                  <>
-                    <Typography sx={{ color: "text.primary", fontSize: 12, p: 0.5 }}>{item.name}</Typography>
-                  </>
-                }
-              >
-                <Avatar
-                  sx={{
-                    background: hexToRgba(item.color, 0.125),
-                    width: 56,
-                    height: 56,
-                    cursor: "pointer",
-                    ":hover": {
-                      boxShadow: 1,
-                    },
-                  }}
-                >
-                  {React.cloneElement(item.icon, { sx: { fontSize: 24 } })}
-                </Avatar>
-              </Tooltip>
+            <motion.div
+              layout
+              layoutId={item.key}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0 }}
+              key={item.key}
+            >
+              <Badge title={item.name} height={56} width={56} color={item.color} fontSize={24} children={item.icon} />
             </motion.div>
           ))}
         </AnimatePresence>

@@ -1,15 +1,8 @@
 import { SvgIcon, SvgIconProps } from "@mui/material";
 
-export function TsIcon(props: SvgIconProps) {
+export function TypeScriptIcon(props: SvgIconProps) {
   return (
-    <SvgIcon
-      width="800px"
-      height="800px"
-      viewBox="0 0 256 256"
-      version="1.1"
-      preserveAspectRatio="xMidYMid"
-      {...props}
-    >
+    <SvgIcon width="800px" height="800px" viewBox="0 0 256 256" version="1.1" preserveAspectRatio="xMidYMid" {...props}>
       <g>
         <polygon
           fill="#007ACC"
