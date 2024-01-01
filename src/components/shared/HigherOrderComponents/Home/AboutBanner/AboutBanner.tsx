@@ -37,9 +37,9 @@ export function AboutBanner() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
+      // initial={{ opacity: 0, y: 100 }}
+      // animate={{ opacity: 1, y: 0 }}
+      // transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
       style={{
         display: "flex",
         flexDirection: "column",
@@ -62,7 +62,15 @@ export function AboutBanner() {
           sx={{
             wordBreak: "break-word",
             fontWeight: "bold",
-            fontFamily: ['"Calibre"', '"Inter"', '"San Francisco"', '"SF Pro Text"', "-apple-system", "system-ui", "sans-serif"].join(","),
+            fontFamily: [
+              '"Calibre"',
+              '"Inter"',
+              '"San Francisco"',
+              '"SF Pro Text"',
+              "-apple-system",
+              "system-ui",
+              "sans-serif",
+            ].join(","),
           }}
         >
           Subhadip Biswas
@@ -72,7 +80,15 @@ export function AboutBanner() {
           variant="h2"
           sx={{
             fontWeight: "bold",
-            fontFamily: ['"Calibre"', '"Inter"', '"San Francisco"', '"SF Pro Text"', "-apple-system", "system-ui", "sans-serif"].join(","),
+            fontFamily: [
+              '"Calibre"',
+              '"Inter"',
+              '"San Francisco"',
+              '"SF Pro Text"',
+              "-apple-system",
+              "system-ui",
+              "sans-serif",
+            ].join(","),
           }}
         >
           Building Stuffs on the Web
@@ -85,10 +101,18 @@ export function AboutBanner() {
           fontSize: 14,
         }}
       >
-        I am a <span style={{ color: theme?.palette?.warning?.main }}>Full Stack Developer</span> and{" "}
-        <span style={{ color: theme?.palette?.warning?.main }}>Cybersecurity Enthusiast</span>, I combine technical expertise with a security-focused mindset to
-        deliver innovative solutions. With proficiency in various programming languages and frameworks, I'm always seeking out new technologies to improve my
-        skills.
+        I am a{" "}
+        <span style={{ color: theme?.palette?.warning?.main }}>
+          Full Stack Developer
+        </span>{" "}
+        and{" "}
+        <span style={{ color: theme?.palette?.warning?.main }}>
+          Cybersecurity Enthusiast
+        </span>
+        , I combine technical expertise with a security-focused mindset to
+        deliver innovative solutions. With proficiency in various programming
+        languages and frameworks, I'm always seeking out new technologies to
+        improve my skills.
       </Typography>
       <Box
         sx={{
@@ -133,7 +157,12 @@ export function AboutBanner() {
           }}
         >
           {socialLinks.map((item, index) => (
-            <IconButton key={index} href={item.link} size="medium" sx={{ border: 0.5, borderColor: "divider" }}>
+            <IconButton
+              key={index}
+              href={item.link}
+              size="medium"
+              sx={{ border: 0.5, borderColor: "divider" }}
+            >
               {item.icon}
             </IconButton>
           ))}
