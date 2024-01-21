@@ -1,6 +1,6 @@
 import { jsx } from "@emotion/react";
 import { HomeLayout } from "../layouts";
-import { IRoute } from "../types/router/routes";
+import { IRoute } from "../types/router/routes/constants";
 import { About, Contact, Experience, Home, Work } from "../pages";
 
 const routes: IRoute[] = [

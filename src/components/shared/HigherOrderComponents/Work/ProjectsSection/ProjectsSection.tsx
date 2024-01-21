@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import { ProjectsBanner } from "../ProjectsBanner/ProjectsBanner";
-import { ProjectsContent } from "../ProjectsContent/ProjectsContent";
+import { TextGroup } from "./TextGroup";
+import { Content } from "./Content";
 
 export function ProjectsSection() {
   return (
@@ -12,8 +12,8 @@ export function ProjectsSection() {
         width: "100%",
       }}
     >
-      <ProjectsBanner />
-      <ProjectsContent />
+      <TextGroup />
+      <Content />
     </Box>
   );
 }

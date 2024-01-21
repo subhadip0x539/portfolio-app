@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { IScreenSlideProps } from "../../../../types/props/components/shared/Slides/ScreenSlide";
+import { IScreenSlideProps } from "../../../../types/components/shared/Slides/ScreenSlide";
 
 export function ScreenSlide(props: IScreenSlideProps) {
   const { isPresent } = props;

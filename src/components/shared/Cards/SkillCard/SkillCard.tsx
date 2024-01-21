@@ -1,5 +1,5 @@
 import { Card, CardContent, Typography } from "@mui/material";
-import { SkillCardProps } from "../../../../types/props/components/shared/Cards/SkillCard";
+import { SkillCardProps } from "../../../../types/components/shared/Cards/SkillCard";
 
 export function SkillCard(props: SkillCardProps) {
   const { content } = props;

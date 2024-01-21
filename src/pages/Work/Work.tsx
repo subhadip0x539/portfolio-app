@@ -19,8 +19,8 @@ export function Work() {
           py: 10,
         }}
       >
-        <ProjectsSection />
         <SkillsSection />
+        <ProjectsSection />
         <ScreenSlide isPresent={isPresent} />
       </Box>
     </Container>

@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { HomeAppBar as AppBar } from "../../components/shared/AppBars";
+import { HomeNavBar } from "../../components/shared/NavBars";
 import { Outlet } from "react-router";
 import { AnimatePresence } from "framer-motion";
 
@@ -14,8 +14,8 @@ export function HomeLayout() {
         background: (theme) => theme.palette.background.default,
       }}
     >
-      <AppBar />
-      <AnimatePresence mode="wait" initial={true}>
+      <HomeNavBar />
+      <AnimatePresence mode="wait">
         <Box
           sx={{
             flex: 1,
