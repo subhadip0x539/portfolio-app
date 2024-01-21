@@ -6,7 +6,7 @@ import { themeSelector } from "./themes";
 
 function App() {
   return (
-    <ThemeProvider theme={themeSelector("vue-dark")}>
+    <ThemeProvider theme={themeSelector("vite-dark")}>
       <CssBaseline />
       <Box className="app" sx={{ height: "100%", width: "100%" }}>
         <RouterProvider router={router} />
