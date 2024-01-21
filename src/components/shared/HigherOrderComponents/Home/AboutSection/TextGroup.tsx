@@ -37,9 +37,9 @@ export function TextGroup() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 100 }}
+      initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 1, duration: 0.5, ease: "easeOut" }}
+      transition={{ delay: 1, duration: 0.5 }}
       style={{
         display: "flex",
         flexDirection: "column",
