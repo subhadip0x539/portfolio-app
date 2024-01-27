@@ -1,2 +1,1 @@
-export { hexToRgba } from "./hexToRgba/hexToRgba";
-export { dateDelta } from "./dateDelta/dateDelta";
+export { hexToRgba } from "./hexToRgba";

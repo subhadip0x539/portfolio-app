@@ -1,1 +1,1 @@
-export { Badge } from "./Badge/Badge";
+export { ThemeSwitcher } from "./ThemeSwitcher/ThemeSwitcher";

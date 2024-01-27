@@ -1,32 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono&family=Roboto+Mono&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  font-synthesis: style;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+  --alt-font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  --text-clip-bg: -webkit-linear-gradient(120deg, #41d1ff 10%, #bd34fe);
+  --image-bg: linear-gradient(-45deg, #bd34fe 50%, #41d1ff 50%);
+  --scrollbar-thumb-color: rgba(255, 255, 255, 0.075);
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  font-family: "Roboto Mono", monospace;
   box-sizing: border-box;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
 }
 
-::-webkit-scrollbar {
-  width: 0.5rem;
-  height: 0.5rem;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb-color);
-  border-radius: 1rem;
+.alt-font-family {
+  font-family: var(--alt-font-family);
 }
 
 .text-clip {
-  padding-bottom: 2px;
+  padding-bottom: 8px;
   background: var(--text-clip-bg);
   background-clip: text;
   -webkit-text-fill-color: transparent;
