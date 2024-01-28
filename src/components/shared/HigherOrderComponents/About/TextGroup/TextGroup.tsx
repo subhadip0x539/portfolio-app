@@ -8,7 +8,7 @@ export function TextGroup() {
       <h2 className="sm:text-5xl text-4xl alt-font-family font-bold">
         Subhadip Biswas
       </h2>
-      <h2 className="sm:text-5xl text-4xl alt-font-family font-bold text-clip ">
+      <h2 className="sm:text-5xl text-4xl alt-font-family font-bold text-clip">
         Building Stuffs on the Web
       </h2>
       <p className="sm:text-sm text-xs text-foreground-50 font-thin">
