@@ -251,6 +251,7 @@ export function Content() {
             <div className="flex gap-2">
               {item.gitHubLink !== "" && (
                 <Button
+                  variant="flat"
                   isIconOnly
                   size="md"
                   className="rounded-full"
