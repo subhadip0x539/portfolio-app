@@ -1,22 +1,34 @@
 import { Avatar, Button, Tooltip } from "@nextui-org/react";
 import {
   BashIcon,
+  BitBucketIcon,
   CssIcon,
+  CtfIcon,
   DockerIcon,
+  ElasticIcon,
   FastApiIcon,
+  FigmaIcon,
   FlaskIcon,
   FramerIcon,
+  GinGonicIcon,
   GitHubIcon,
   GitIcon,
   GoIcon,
   HtmlIcon,
   JavaScriptIcon,
+  JenkinsIcon,
+  JiraIcon,
   MaterialUiIcon,
+  MongoDbIcon,
+  MySqlIcon,
+  NginxIcon,
   PandasIcon,
   PythonIcon,
+  RabbitMqIcon,
   ReactIcon,
   ReduxIcon,
   ScssIcon,
+  SwaggerIcon,
   TypeScriptIcon,
 } from "../../../Icons";
 import { hexToRgba } from "../../../../../utils/methods";
@@ -25,7 +37,7 @@ import {
   ISkill,
   TCategory,
 } from "../../../../../types/components/skills";
-import { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 
 const categories: ICategory[] = [
   {
@@ -52,210 +64,210 @@ const skills: ISkill[] = [
     key: "go",
     category: "languages",
     color: "#79D4FD",
-    icon: <GoIcon size={26} />,
+    icon: <GoIcon />,
   },
   {
     name: "JavaScript",
     key: "js",
     category: "languages",
     color: "#F7DF1E",
-    icon: <JavaScriptIcon size={26} />,
+    icon: <JavaScriptIcon />,
   },
   {
     name: "TypeScript",
     key: "ts",
     category: "languages",
     color: "#007ACC",
-    icon: <TypeScriptIcon size={26} />,
+    icon: <TypeScriptIcon />,
   },
   {
     name: "Python",
     key: "py",
     category: "languages",
     color: "#2673B4",
-    icon: <PythonIcon size={26} />,
+    icon: <PythonIcon />,
   },
   {
     name: "Bash",
     key: "sh",
     category: "languages",
     color: "#FFFFFF",
-    icon: <BashIcon size={26} />,
+    icon: <BashIcon />,
   },
   {
     name: "HTML",
     key: "html",
     category: "languages",
     color: "#F16529",
-    icon: <HtmlIcon size={26} />,
+    icon: <HtmlIcon />,
   },
   {
     name: "CSS",
     key: "css",
     category: "languages",
     color: "#1172B8",
-    icon: <CssIcon size={26} />,
+    icon: <CssIcon />,
   },
   {
     name: "Gin",
     key: "gin",
     category: "frameworks",
     color: "#0090D1",
-    icon: <></>,
+    icon: <GinGonicIcon />,
   },
   {
     name: "React",
     key: "react",
     category: "frameworks",
     color: "#53C1DE",
-    icon: <ReactIcon size={26} />,
+    icon: <ReactIcon />,
   },
   {
     name: "Redux",
     key: "redux",
     category: "frameworks",
     color: "#764ABC",
-    icon: <ReduxIcon size={26} />,
+    icon: <ReduxIcon />,
   },
   {
     name: "Matrial UI",
     key: "materialui",
     category: "frameworks",
     color: "#007FFF",
-    icon: <MaterialUiIcon size={26} />,
+    icon: <MaterialUiIcon />,
   },
   {
     name: "Framer",
     key: "framer",
     category: "frameworks",
     color: "#00AAFF",
-    icon: <FramerIcon size={26} />,
+    icon: <FramerIcon />,
   },
   {
     name: "SCSS",
     key: "scss",
     category: "frameworks",
     color: "#CD6799",
-    icon: <ScssIcon size={26} />,
+    icon: <ScssIcon />,
   },
   {
     name: "FastAPI",
     key: "fastapi",
     category: "frameworks",
     color: "#009485",
-    icon: <FastApiIcon size={26} />,
+    icon: <FastApiIcon />,
   },
   {
     name: "Flask",
     key: "flask",
     category: "frameworks",
     color: "#FFFFFF",
-    icon: <FlaskIcon size={26} />,
+    icon: <FlaskIcon />,
   },
   {
     name: "Pandas",
     key: "pandas",
     category: "frameworks",
     color: "#FFFFFF",
-    icon: <PandasIcon size={26} />,
+    icon: <PandasIcon />,
   },
   {
     name: "Git",
     key: "git",
     category: "others",
     color: "#EE513B",
-    icon: <GitIcon size={26} />,
+    icon: <GitIcon />,
   },
   {
     name: "GitHub",
     key: "github",
     category: "others",
     color: "#ffffff",
-    icon: <GitHubIcon size={26} />,
+    icon: <GitHubIcon />,
   },
   {
     name: "Docker",
     key: "docker",
     category: "others",
     color: "#2396ed",
-    icon: <DockerIcon size={26} />,
+    icon: <DockerIcon />,
   },
   {
     name: "Swagger",
     key: "swagger",
     category: "others",
     color: "#49A32B",
-    icon: <></>,
+    icon: <SwaggerIcon />,
   },
   {
     name: "MongoDB",
     key: "mongodb",
     category: "others",
     color: "#13AA52",
-    icon: <></>,
+    icon: <MongoDbIcon />,
   },
   {
     name: "MySQL",
     key: "mysql",
     category: "others",
     color: "#00758F",
-    icon: <></>,
+    icon: <MySqlIcon />,
   },
   {
     name: "JIRA",
     key: "jira",
     category: "others",
     color: "#2684FF",
-    icon: <></>,
+    icon: <JiraIcon />,
   },
   {
     name: "BitBucket",
     key: "bitbucket",
     category: "others",
     color: "#2684FF",
-    icon: <></>,
+    icon: <BitBucketIcon />,
   },
   {
     name: "Figma",
     key: "figma",
     category: "others",
     color: "#ffffff",
-    icon: <></>,
+    icon: <FigmaIcon />,
   },
   {
     name: "Jenkins",
     key: "jenkins",
     category: "others",
     color: "#D33833",
-    icon: <></>,
+    icon: <JenkinsIcon />,
   },
   {
     name: "RabbitMQ",
     key: "rabbitmq",
     category: "others",
     color: "#FF6600",
-    icon: <></>,
+    icon: <RabbitMqIcon />,
   },
   {
     name: "Nginx",
     key: "nginx",
     category: "others",
     color: "#009639",
-    icon: <></>,
+    icon: <NginxIcon />,
   },
   {
     name: "ELK Stack",
     key: "elastic",
     category: "others",
     color: "#24BBB1",
-    icon: <></>,
+    icon: <ElasticIcon />,
   },
   {
     name: "CTF",
     key: "ctf",
     category: "others",
-    color: "#ffffff",
-    icon: <></>,
+    color: "#FFFFFF",
+    icon: <CtfIcon />,
   },
 ];
 
@@ -271,7 +283,7 @@ export function Content() {
 
   return (
     <div className="flex flex-col items-center justify-center gap-8">
-      <div className="flex gap-4">
+      <div className="sm:flex hidden gap-4 flex-wrap items-center justify-center">
         {categories.map((item, index) => (
           <Button
             key={index}
@@ -296,7 +308,7 @@ export function Content() {
             className="rounded"
           >
             <Avatar
-              fallback={item.icon}
+              fallback={React.cloneElement(item.icon, { size: 26 })}
               className="h-14 w-14 cursor-pointer"
               style={{
                 background: hexToRgba(item.color, 0.125),
