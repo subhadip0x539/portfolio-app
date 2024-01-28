@@ -253,7 +253,7 @@ export function Content() {
                 <Button
                   isIconOnly
                   size="md"
-                  className="rounded-md-full"
+                  className="rounded-full"
                   onClick={() => window.open(item.gitHubLink)}
                 >
                   <GitHubIcon size={18} />
