@@ -5,7 +5,7 @@ export function TextGroup() {
   return (
     <div className="flex flex-col gap-4 max-w-prose sm:text-left text-center sm:items-start items-center">
       <p className="sm:text-sm text-xs text-primary">Hi👋 my name is</p>
-      <h2 className="sm:text-5xl text-4xl alt-font-family font-bold">
+      <h2 className="sm:text-5xl text-4xl alt-font-family font-bold text-foreground">
         Subhadip Biswas
       </h2>
       <h2 className="sm:text-5xl text-4xl alt-font-family font-bold text-clip">

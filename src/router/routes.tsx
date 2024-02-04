@@ -1,7 +1,6 @@
 import { AppLayout } from "../layouts";
-import { IRoute } from "../types/router/routes";
 
-const routes: IRoute[] = [
+const routes = [
   {
     path: "",
     exact: true,

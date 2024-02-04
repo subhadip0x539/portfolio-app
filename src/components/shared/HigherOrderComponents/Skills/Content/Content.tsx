@@ -302,7 +302,7 @@ export function Content() {
             showArrow={true}
             color="default"
             placement="bottom"
-            className="rounded"
+            radius="sm"
           >
             <Avatar
               fallback={React.cloneElement(item.icon, { size: 26 })}
