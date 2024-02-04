@@ -11,8 +11,6 @@ import {
   ReactIcon,
   TypeScriptIcon,
 } from "../../../Icons";
-import GinMicroserviceBoilterplateImg from "../../../../../assets/gin-microservice-boilerplate.png";
-import PortfolioAppImg from "../../../../../assets/portfolio-app.png";
 import { Avatar, Button } from "@nextui-org/react";
 import React from "react";
 import { hexToRgba } from "../../../../../utils/methods";
@@ -25,7 +23,6 @@ export function Content() {
       key: "portfolio-website",
       gitHubLink: "https://github.com/subhadip0x539/portfolio-app",
       projectLink: "",
-      image: PortfolioAppImg,
       description:
         "This website is a representation of my online presence and a hub for information about my background, projects, and achievements. The design is aimed at providing a clean experience.",
       skills: [
@@ -55,7 +52,6 @@ export function Content() {
     {
       name: "Gin Microservice Boilerplate",
       key: "gin-microservice-boilerplate",
-      image: GinMicroserviceBoilterplateImg,
       gitHubLink: "https://github.com/subhadip0x539/gin-microservice-boilerplate",
       projectLink: "",
       description:
@@ -88,7 +84,6 @@ export function Content() {
       name: "File Integrity Monitor",
       key: "file-integrity-monitor",
       gitHubLink: "https://github.com/subhadip0x539/file-integrity-monitor",
-      image: GinMicroserviceBoilterplateImg,
       projectLink: "",
       description:
         "This is a security tool designed to monitor and detect unauthorized changes to files and directories on a system. It provides a crucial layer of defense against malicious activities.",

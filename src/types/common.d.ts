@@ -18,7 +18,6 @@ interface TSkill {
 interface TProject {
   name: string;
   key: string;
-  image: string;
   description: string;
   skills: ISkill[];
   gitHubLink: string;
