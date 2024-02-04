@@ -1,6 +1,6 @@
-import { IIconProps } from "../../../../types/components/icon";
+import { IIconProps } from "../../../../types/proptypes";
 
-export function GitHubIcon(props: IIconProps) {
+export function GitHubColored(props: IIconProps) {
   const { fill, size, className } = props;
 
   return (

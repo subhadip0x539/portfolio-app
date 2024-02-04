@@ -11,7 +11,7 @@ import {
   FlaskIcon,
   FramerIcon,
   GinGonicIcon,
-  GitHubIcon,
+  GitHubColored,
   GitIcon,
   GoIcon,
   HtmlIcon,
@@ -32,14 +32,11 @@ import {
   TypeScriptIcon,
 } from "../../../Icons";
 import { hexToRgba } from "../../../../../utils/methods";
-import {
-  ICategory,
-  ISkill,
-  TCategory,
-} from "../../../../../types/components/skills";
-import React, { useMemo, useState } from "react";
 
-const categories: ICategory[] = [
+import React, { useMemo, useState } from "react";
+import { TCategory, TSkill } from "../../../../../types/common";
+
+const categories: { name: string; key: TCategory | "all" }[] = [
   {
     name: "All",
     key: "all",
@@ -58,7 +55,7 @@ const categories: ICategory[] = [
   },
 ];
 
-const skills: ISkill[] = [
+const skills: TSkill[] = [
   {
     name: "Go",
     key: "go",
@@ -183,7 +180,7 @@ const skills: ISkill[] = [
     key: "github",
     category: "others",
     color: "#ffffff",
-    icon: <GitHubIcon />,
+    icon: <GitHubColored />,
   },
   {
     name: "Docker",

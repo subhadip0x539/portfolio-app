@@ -1,4 +1,4 @@
-import { IIconProps } from "../../../../types/components/icon";
+import { IIconProps } from "../../../../types/proptypes";
 
 export function GinGonicIcon(props: IIconProps) {
   const { fill, size, className } = props;

@@ -19,8 +19,8 @@ export default {
           colors: {
             background: {
               DEFAULT: "#202127",
-              primary: "#202127",
-              secondary: "#1B1B1F",
+              secondary: "#202127",
+              primary: { DEFAULT: "#1B1B1F", 50: "rgba(27, 27, 31, 0.5)" },
             },
             text: {
               DEFAULT: "#FFFFFF",
