@@ -1,5 +1,5 @@
 import { Button } from "@nextui-org/react";
-import { ArrowRightIcon, SlackIcon } from "../../../Icons";
+import { ArrowRight, Slack } from "../../../Icons";
 
 export function TextGroup() {
   return (
@@ -22,7 +22,7 @@ export function TextGroup() {
           className="rounded-full px-4 gap-4"
           variant="flat"
           color="primary"
-          endContent={<ArrowRightIcon className="w-4 h-4" />}
+          endContent={<ArrowRight size={16} />}
         >
           Resume
         </Button>
@@ -30,7 +30,7 @@ export function TextGroup() {
           className="rounded-full px-4 gap-4"
           variant="flat"
           color="default"
-          startContent={<SlackIcon className="w-4 h-4" />}
+          startContent={<Slack size={16} />}
         >
           Slack Me
         </Button>

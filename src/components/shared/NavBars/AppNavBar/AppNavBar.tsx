@@ -1,5 +1,5 @@
 import { Button, Tooltip } from "@nextui-org/react";
-import { Discord, LogoIcon, Envelope, LinkedIn, GitHub } from "../../Icons";
+import { Discord, LogoColored, Envelope, LinkedIn, GitHub } from "../../Icons";
 import { useScrollTrigger } from "../../../../utils/hooks";
 
 export function AppNavBar() {
@@ -13,7 +13,7 @@ export function AppNavBar() {
     >
       <div className="mx-auto max-w-6xl h-16 flex items-center justify-between px-6">
         <div className="flex items-center justify-center gap-4">
-          <LogoIcon className="w-5 h-5" />
+          <LogoColored size={20} />
           <p className="text-foreground text-sm">Subhadip Biswas</p>
         </div>
         <div className="flex items-center justify-center gap-8">
