@@ -8,7 +8,7 @@ export function AppNavBar() {
   return (
     <nav
       className={`fixed left-0 right-0 z-50 transition-backgroud duration-300 ${
-        trigger ? "shadow-lg bg-background-primary backdrop-blur-sm" : ""
+        trigger ? "shadow-lg bg-background backdrop-blur-sm" : ""
       }`}
     >
       <div className="mx-auto max-w-6xl h-16 flex items-center justify-between px-6">
@@ -32,7 +32,7 @@ export function AppNavBar() {
             </p>
           </div>
           <div className="flex items-center justify-center gap-2">
-            <Tooltip content="LinkedIn" showArrow={true} className="rounded">
+            <Tooltip content="LinkedIn" showArrow={true} radius="sm">
               <Button
                 isIconOnly
                 variant="flat"
@@ -42,7 +42,7 @@ export function AppNavBar() {
                 <LinkedIn className="w-4 h-4" />
               </Button>
             </Tooltip>
-            <Tooltip content="GitHub" showArrow={true} className="rounded">
+            <Tooltip content="GitHub" showArrow={true} radius="sm">
               <Button
                 isIconOnly
                 variant="flat"
@@ -52,7 +52,7 @@ export function AppNavBar() {
                 <GitHub className="w-4 h-4" />
               </Button>
             </Tooltip>
-            <Tooltip content="Discord" showArrow={true} className="rounded">
+            <Tooltip content="Discord" showArrow={true} radius="sm">
               <Button
                 isIconOnly
                 variant="flat"
@@ -62,7 +62,7 @@ export function AppNavBar() {
                 <Discord className="w-4 h-4" />
               </Button>
             </Tooltip>
-            <Tooltip content="Send Email" showArrow={true} className="rounded">
+            <Tooltip content="Send Email" showArrow={true} radius="sm">
               <Button
                 isIconOnly
                 variant="flat"

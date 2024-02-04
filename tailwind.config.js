@@ -18,18 +18,14 @@ export default {
           extend: "dark",
           colors: {
             background: {
-              DEFAULT: "#202127",
-              secondary: "#202127",
-              primary: { DEFAULT: "#1B1B1F", 50: "rgba(27, 27, 31, 0.5)" },
+              DEFAULT: "#1B1B1F",
             },
-            text: {
-              DEFAULT: "#FFFFFF",
-              primary: "#FFFFFF",
-              secondary: "rgba(255, 255, 255, 0.5)",
+            accent: {
+              DEFAULT: "#202127",
             },
             foreground: {
-              50: "rgba(255, 255, 255, 0.5)",
               DEFAULT: "#FFFFFF",
+              50: "rgba(255, 255, 255, 0.5)",
             },
             primary: {
               DEFAULT: "#646CFF",

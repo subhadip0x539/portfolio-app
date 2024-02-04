@@ -37,3 +37,4 @@ export { CtfIcon } from "./CtfIcon/CtfIcon";
 export { GinGonicIcon } from "./GinGonicIcon/GinGonicIcon";
 export { GitHub } from "./GitHub/GitHub";
 export { OpenInNew } from "./OpenInNew/OpenInNew";
+export { MoreHorizontal } from "./MoreHorizontal/MoreHorizontal";

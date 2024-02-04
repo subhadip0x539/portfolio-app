@@ -6,12 +6,20 @@ import {
   GoIcon,
   JavaScriptIcon,
   MaterialUiIcon,
+  MoreHorizontal,
   OpenInNew,
   PythonIcon,
   ReactIcon,
   TypeScriptIcon,
 } from "../../../Icons";
-import { Avatar, Button } from "@nextui-org/react";
+import {
+  Avatar,
+  Button,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
+} from "@nextui-org/react";
 import React from "react";
 import { hexToRgba } from "../../../../../utils/methods";
 import { TProject } from "../../../../../types/common";
@@ -52,7 +60,8 @@ export function Content() {
     {
       name: "Gin Microservice Boilerplate",
       key: "gin-microservice-boilerplate",
-      gitHubLink: "https://github.com/subhadip0x539/gin-microservice-boilerplate",
+      gitHubLink:
+        "https://github.com/subhadip0x539/gin-microservice-boilerplate",
       projectLink: "",
       description:
         "This is a simple boilerplate for building microservices using Go and Gin framework. It includes basic configurations and structure to kickstart your microservices development.",
@@ -128,32 +137,57 @@ export function Content() {
   ];
 
   return (
-    <div className="flex flex-col gap-16 projects-content">
+    <div className="flex flex-col gap-16">
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-4">
         {projects.map((item, index) => (
-          <div className="bg-background-secondary p-6 flex flex-col gap-8 rounded-lg justify-between" key={index}>
+          <div
+            className="bg-accent p-6 flex flex-col gap-8 rounded-lg justify-between"
+            key={index}
+          >
             <div className="flex flex-col gap-4">
               <div className="flex justify-between items-center">
                 <Avatar radius="sm" className="text-lg" fallback={"🛠️"} />
-                {item.projectLink && <Button isIconOnly radius="full" size="md" variant="ghost" startContent={<OpenInNew size={16} />} />}
+                <Dropdown placement="bottom-end">
+                  <DropdownTrigger>
+                    <Button
+                      isIconOnly
+                      radius="full"
+                      variant="ghost"
+                      startContent={<MoreHorizontal size={18} />}
+                    />
+                  </DropdownTrigger>
+                  <DropdownMenu variant="flat" aria-label="Dropdown menu">
+                    <DropdownItem
+                      key="github"
+                      startContent={<GitHub size={18} />}
+                    >
+                      GitHub
+                    </DropdownItem>
+                    <DropdownItem
+                      key="externallink"
+                      startContent={<OpenInNew size={18} />}
+                    >
+                      External Link
+                    </DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
               </div>
-              <h4>{item.name}</h4>
-              <p className="sm:text-sm text-xs text-foreground-50 font-thin">{item.description}</p>
+              <h4 className="text-foreground text-lg">{item.name}</h4>
+              <p className="sm:text-sm text-xs text-foreground-50 font-thin">
+                {item.description}
+              </p>
             </div>
-            <div className="flex items-center justify-between">
-              <div className="flex gap-2 flex-wrap">
-                {item.skills.map((skill, index) => (
-                  <Avatar
-                    key={index}
-                    fallback={React.cloneElement(skill.icon, { size: 16 })}
-                    className="h-8 w-8 cursor-pointer"
-                    style={{
-                      background: hexToRgba(skill.color, 0.125),
-                    }}
-                  />
-                ))}
-              </div>
-              <Button isIconOnly radius="full" size="sm" variant="ghost" color="secondary" startContent={<GitHub size={16} />} />
+            <div className="flex gap-2 flex-wrap">
+              {item.skills.map((skill, index) => (
+                <Avatar
+                  key={index}
+                  fallback={React.cloneElement(skill.icon, { size: 16 })}
+                  className="h-8 w-8 cursor-pointer"
+                  style={{
+                    background: hexToRgba(skill.color, 0.125),
+                  }}
+                />
+              ))}
             </div>
           </div>
         ))}
