@@ -1,11 +1,5 @@
 import { Button, Tooltip } from "@nextui-org/react";
-import {
-  DiscordIcon,
-  GitHubIcon,
-  LogoIcon,
-  EnvelopeIcon,
-  LinkedInIcon,
-} from "../../Icons";
+import { Discord, LogoIcon, Envelope, LinkedIn, GitHub } from "../../Icons";
 import { useScrollTrigger } from "../../../../utils/hooks";
 
 export function AppNavBar() {
@@ -45,7 +39,7 @@ export function AppNavBar() {
                 size="sm"
                 className="rounded-full"
               >
-                <LinkedInIcon className="w-4 h-4" />
+                <LinkedIn className="w-4 h-4" />
               </Button>
             </Tooltip>
             <Tooltip content="GitHub" showArrow={true} className="rounded">
@@ -55,7 +49,7 @@ export function AppNavBar() {
                 size="sm"
                 className="rounded-full"
               >
-                <GitHubIcon className="w-4 h-4" />
+                <GitHub className="w-4 h-4" />
               </Button>
             </Tooltip>
             <Tooltip content="Discord" showArrow={true} className="rounded">
@@ -65,7 +59,7 @@ export function AppNavBar() {
                 size="sm"
                 className="rounded-full"
               >
-                <DiscordIcon className="w-4 h-4" />
+                <Discord className="w-4 h-4" />
               </Button>
             </Tooltip>
             <Tooltip content="Send Email" showArrow={true} className="rounded">
@@ -75,7 +69,7 @@ export function AppNavBar() {
                 size="sm"
                 className="rounded-full"
               >
-                <EnvelopeIcon className="w-4 h-4" />
+                <Envelope className="w-4 h-4" />
               </Button>
             </Tooltip>
           </div>

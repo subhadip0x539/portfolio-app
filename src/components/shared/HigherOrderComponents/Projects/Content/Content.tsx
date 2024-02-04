@@ -1,29 +1,25 @@
-import { IProject } from "../../../../../types/components/projects";
 import {
-  CssIcon,
   DockerIcon,
   FlaskIcon,
-  FramerIcon,
   GinGonicIcon,
-  GitHubIcon,
+  GitHub,
   GoIcon,
-  HtmlIcon,
   JavaScriptIcon,
   MaterialUiIcon,
+  OpenInNew,
   PythonIcon,
   ReactIcon,
-  ScssIcon,
   TypeScriptIcon,
 } from "../../../Icons";
 import GinMicroserviceBoilterplateImg from "../../../../../assets/gin-microservice-boilerplate.png";
 import PortfolioAppImg from "../../../../../assets/portfolio-app.png";
-import FileIntegrityMonitorImg from "../../../../../assets/file-integrity-monitor.png";
 import { Avatar, Button } from "@nextui-org/react";
 import React from "react";
 import { hexToRgba } from "../../../../../utils/methods";
+import { TProject } from "../../../../../types/common";
 
 export function Content() {
-  const projects: IProject[] = [
+  const projects: TProject[] = [
     {
       name: "Portfolio Website",
       key: "portfolio-website",
@@ -31,7 +27,7 @@ export function Content() {
       projectLink: "",
       image: PortfolioAppImg,
       description:
-        "This website is a representation of my online presence and a hub for information about my background, projects, and achievements. The design is aimed at providing a clean and user-friendly experience.",
+        "This website is a representation of my online presence and a hub for information about my background, projects, and achievements. The design is aimed at providing a clean experience.",
       skills: [
         {
           name: "TypeScript",
@@ -39,20 +35,6 @@ export function Content() {
           category: "languages",
           key: "ts",
           color: "#007acc",
-        },
-        {
-          name: "HTML",
-          icon: <HtmlIcon />,
-          category: "languages",
-          key: "ts",
-          color: "#f16529",
-        },
-        {
-          name: "CSS",
-          icon: <CssIcon />,
-          category: "languages",
-          key: "ts",
-          color: "#1172b8",
         },
         {
           name: "React",
@@ -68,31 +50,16 @@ export function Content() {
           key: "ts",
           color: "#007fff",
         },
-        {
-          name: "Framer",
-          color: "#00aaff",
-          icon: <FramerIcon />,
-          category: "languages",
-          key: "ts",
-        },
-        {
-          name: "SCSS",
-          icon: <ScssIcon />,
-          category: "languages",
-          key: "ts",
-          color: "#cd6799",
-        },
       ],
     },
     {
-      name: "Gin Based Microservice Boilerplate",
+      name: "Gin Microservice Boilerplate",
       key: "gin-microservice-boilerplate",
       image: GinMicroserviceBoilterplateImg,
-      gitHubLink:
-        "https://github.com/subhadip0x539/gin-microservice-boilerplate",
+      gitHubLink: "https://github.com/subhadip0x539/gin-microservice-boilerplate",
       projectLink: "",
       description:
-        "This is a simple and lightweight boilerplate for building microservices using the Go programming language and the Gin web framework. It includes basic configurations and structure to kickstart your microservices development.",
+        "This is a simple boilerplate for building microservices using Go and Gin framework. It includes basic configurations and structure to kickstart your microservices development.",
       skills: [
         {
           name: "Go",
@@ -121,7 +88,7 @@ export function Content() {
       name: "File Integrity Monitor",
       key: "file-integrity-monitor",
       gitHubLink: "https://github.com/subhadip0x539/file-integrity-monitor",
-      image: FileIntegrityMonitorImg,
+      image: GinMicroserviceBoilterplateImg,
       projectLink: "",
       description:
         "This is a security tool designed to monitor and detect unauthorized changes to files and directories on a system. It provides a crucial layer of defense against malicious activities.",
@@ -139,20 +106,6 @@ export function Content() {
           category: "languages",
           key: "ts",
           color: "#f7df1e",
-        },
-        {
-          name: "HTML",
-          icon: <HtmlIcon />,
-          category: "languages",
-          key: "ts",
-          color: "#f16529",
-        },
-        {
-          name: "CSS",
-          icon: <CssIcon />,
-          category: "languages",
-          key: "ts",
-          color: "#1172b8",
         },
         {
           name: "Flask",
@@ -175,95 +128,41 @@ export function Content() {
           key: "ts",
           color: "#007fff",
         },
-        {
-          name: "SCSS",
-          icon: <ScssIcon />,
-          category: "languages",
-          key: "ts",
-          color: "#cd6799",
-        },
       ],
     },
   ];
+
   return (
-    <div className="flex flex-col gap-16">
-      {projects.map((item, index) => (
-        <div className="grid grid-cols-12">
-          <div
-            className="relative cursor-pointer"
-            style={{
-              gridArea:
-                (index + 1) % 2 === 0 ? "1 / 6 / -1 / -1" : "1 / 1 / -1 / 8",
-            }}
-          >
-            <div className="absolute h-full w-full bg-primary opacity-25 hover:opacity-0 transition-opacity duration-300 rounded-md" />
-            <img
-              className="rounded-md"
-              src={item.image}
-              style={{
-                width: "100%",
-                height: "auto",
-                display: "block",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-          <div
-            className="flex z-10 justify-center flex-col gap-4"
-            style={{
-              gridArea:
-                (index + 1) % 2 === 0 ? "1 / 1 / -1 / 7" : "1 / 7 / -1 / -1",
-              alignItems: (index + 1) % 2 === 0 ? "flex-start" : "flex-end",
-              justifyContent: "center",
-            }}
-          >
-            <h3 className="text-xl break-words alt-font-family font-bold">
-              {item.name}
-            </h3>
-            <div
-              className="bg-background-secondary flex flex-col gap-8 p-8 rounded-md"
-              style={{
-                alignItems: (index + 1) % 2 === 0 ? "flex-start" : "flex-end",
-              }}
-            >
-              <p
-                className="text-sm"
-                style={{
-                  textAlign: (index + 1) % 2 === 0 ? "left" : "right",
-                }}
-              >
-                {item.description}
-              </p>
-              {item.skills.length > 0 && (
-                <div className="flex gap-2">
-                  {item.skills.map((skill) => (
-                    <Avatar
-                      fallback={React.cloneElement(skill.icon, { size: 18 })}
-                      className="h-10 w-10 cursor-pointer"
-                      style={{
-                        background: hexToRgba(skill.color, 0.125),
-                      }}
-                    />
-                  ))}
-                </div>
-              )}
+    <div className="flex flex-col gap-16 projects-content">
+      <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-4">
+        {projects.map((item, index) => (
+          <div className="bg-background-secondary p-6 flex flex-col gap-8 rounded-lg justify-between" key={index}>
+            <div className="flex flex-col gap-4">
+              <div className="flex justify-between items-center">
+                <Avatar radius="sm" className="text-lg" fallback={"🛠️"} />
+                {item.projectLink && <Button isIconOnly radius="full" size="md" variant="ghost" startContent={<OpenInNew size={16} />} />}
+              </div>
+              <h4>{item.name}</h4>
+              <p className="sm:text-sm text-xs text-foreground-50 font-thin">{item.description}</p>
             </div>
-            <div className="flex gap-2">
-              {item.gitHubLink !== "" && (
-                <Button
-                  variant="flat"
-                  isIconOnly
-                  size="md"
-                  className="rounded-full"
-                  onClick={() => window.open(item.gitHubLink)}
-                >
-                  <GitHubIcon size={18} />
-                </Button>
-              )}
+            <div className="flex items-center justify-between">
+              <div className="flex gap-2 flex-wrap">
+                {item.skills.map((skill, index) => (
+                  <Avatar
+                    key={index}
+                    fallback={React.cloneElement(skill.icon, { size: 16 })}
+                    className="h-8 w-8 cursor-pointer"
+                    style={{
+                      background: hexToRgba(skill.color, 0.125),
+                    }}
+                  />
+                ))}
+              </div>
+              <Button isIconOnly radius="full" size="sm" variant="ghost" color="secondary" startContent={<GitHub size={16} />} />
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
