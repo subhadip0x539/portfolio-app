@@ -1,10 +1,9 @@
-import { Content, TextGroup } from "../../components/shared/HigherOrderComponents/About";
+import { TextGroup } from "../../components/shared/HigherOrderComponents/About";
 
 export function About() {
   return (
-    <div className="flex sm:flex-row flex-col-reverse sm:justify-between justify-center gap-8 items-center h-screen">
+    <div className="flex flex-col items-center justify-center h-[calc(100vh-176px)]">
       <TextGroup />
-      <Content />
     </div>
   );
 }

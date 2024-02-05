@@ -1,5 +1,5 @@
 import { Button, Tooltip } from "@nextui-org/react";
-import { Discord, LogoColored, Envelope, LinkedIn, GitHub } from "../../Icons";
+import { Discord, LogoColored, Envelope, LinkedIn, Slack } from "../../Icons";
 import { useScrollTrigger } from "../../../../utils/hooks";
 
 export function AppNavBar() {
@@ -7,8 +7,10 @@ export function AppNavBar() {
 
   return (
     <nav
-      className={`fixed left-0 right-0 z-50 transition-backgroud duration-300 ${
-        trigger ? "shadow-lg bg-background backdrop-blur-sm" : ""
+      className={`fixed left-0 right-0 z-50 transition duration-300 ${
+        trigger
+          ? "bg-background backdrop-blur-sm translate-y-[calc(-1*64px)]"
+          : ""
       }`}
     >
       <div className="mx-auto max-w-6xl h-16 flex items-center justify-between px-6">
@@ -17,7 +19,7 @@ export function AppNavBar() {
           <p className="text-foreground text-sm">Subhadip Biswas</p>
         </div>
         <div className="flex items-center justify-center gap-8">
-          <div className="hidden md:flex items-center justify-center gap-4">
+          {/* <div className="hidden md:flex items-center justify-center gap-4">
             <p className="text-foreground text-sm cursor-pointer hover:text-primary transition-colors duration-300">
               About
             </p>
@@ -30,7 +32,7 @@ export function AppNavBar() {
             <p className="text-foreground text-sm cursor-pointer hover:text-primary transition-colors duration-300">
               Projects
             </p>
-          </div>
+          </div> */}
           <div className="flex items-center justify-center gap-2">
             <Tooltip content="LinkedIn" showArrow={true} radius="sm">
               <Button
@@ -49,7 +51,7 @@ export function AppNavBar() {
                 size="sm"
                 className="rounded-full"
               >
-                <GitHub className="w-4 h-4" />
+                <Slack className="w-4 h-4" />
               </Button>
             </Tooltip>
             <Tooltip content="Discord" showArrow={true} radius="sm">
