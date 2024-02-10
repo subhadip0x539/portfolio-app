@@ -25,7 +25,7 @@ let tabs = [
 
 export function SectionNavBar() {
   return (
-    <div className="w-full hidden sm:flex items-center justify-center sticky top-4 z-10 mb-32">
+    <div className="w-full hidden sm:flex items-center justify-center sticky top-4 z-20 mb-32">
       <Tabs items={tabs} radius="full" color="primary">
         {(item) => <Tab key={item.id} title={item.label} className="m-2" />}
       </Tabs>

@@ -40,16 +40,22 @@ body {
   background: var(--text-clip-bg-animate);
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-size: 400% 400%;
-  animation: animate 15s ease infinite;
+  background-size: 200% 200%;
+  animation: animate 10s ease infinite;
 }
 
 @-webkit-keyframes animate {
   0% {
     background-position: 0% 50%;
   }
-  50% {
+  25% {
     background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
   }
   100% {
     background-position: 0% 50%;
@@ -59,8 +65,14 @@ body {
   0% {
     background-position: 0% 50%;
   }
-  50% {
+  25% {
     background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
   }
   100% {
     background-position: 0% 50%;

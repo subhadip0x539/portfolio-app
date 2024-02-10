@@ -38,3 +38,5 @@ export { GinGonicColored } from "./GinGonicColored/GinGonicColored";
 export { GitHub } from "./GitHub/GitHub";
 export { OpenInNew } from "./OpenInNew/OpenInNew";
 export { MoreHorizontal } from "./MoreHorizontal/MoreHorizontal";
+export { Work } from "./Work/Work";
+export { RadioButton } from "./RadioButton/RadioButton";

@@ -1,3 +1,5 @@
+import dayjs, { Dayjs } from "dayjs";
+
 interface TRoute {
   path: string;
   exact: boolean;
@@ -24,4 +26,23 @@ interface TProject {
   projectLink: string;
 }
 
-export { TRoute, TCategory, TSkill, TProject };
+interface TExperience {
+  organization: string;
+  type: string;
+  address: string;
+  tenure: {
+    start: Dayjs;
+    end: Dayjs;
+  };
+  positions: {
+    name: string;
+    tenure: {
+      start: Dayjs;
+      end: Dayjs;
+    };
+    description: string;
+    type: string;
+  }[];
+}
+
+export { TRoute, TCategory, TSkill, TProject, TExperience };

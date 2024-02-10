@@ -1,5 +1,5 @@
 import { AppNavBar, SectionNavBar } from "../../components/shared/NavBars";
-import { About, Projects, Skills } from "../../sections";
+import { About, Experience, Projects, Skills } from "../../sections";
 
 export function AppLayout() {
   return (
@@ -10,6 +10,7 @@ export function AppLayout() {
         <SectionNavBar />
         <Skills />
         <Projects />
+        <Experience />
       </div>
     </div>
   );

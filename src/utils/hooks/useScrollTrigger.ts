@@ -5,7 +5,7 @@ const useScrollTrigger = () => {
 
   useEffect(() => {
     const handelScrollTrigger = () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 120) {
         setTrigger(true);
       } else {
         setTrigger(false);
