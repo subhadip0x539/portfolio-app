@@ -1,13 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --alt-font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
-  --text-clip-bg: -webkit-linear-gradient(120deg, #41d1ff 10%, #bd34fe);
-  --image-bg: linear-gradient(-45deg, #bd34fe 50%, #41d1ff 50%);
+  --alt-font-family: "Open Sans", sans-serif;
+  // --text-clip-bg: -webkit-linear-gradient(120deg, #41d1ff 10%, #bd34fe);
+  --text-clip-bg: -webkit-linear-gradient(120deg, #4b97f3, #a8bdea);
+  --text-clip-bg-animate: -webkit-linear-gradient(
+    -45deg,
+    #086fff,
+    #ffddb7,
+    #ffddb7
+  );
+  // --image-bg: linear-gradient(-45deg, #bd34fe 50%, #41d1ff 50%);
+  --image-bg: linear-gradient(-45deg, #4b97f3 50%, #a8bdea 50%);
   --scrollbar-thumb-color: rgba(255, 255, 255, 0.075);
 }
 
@@ -25,4 +33,48 @@ body {
   background: var(--text-clip-bg);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.text-clip-animate {
+  padding-bottom: 8px;
+  background: var(--text-clip-bg-animate);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: animate 10s ease infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes animate {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

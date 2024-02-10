@@ -6,7 +6,7 @@ import "./index.scss";
 function App() {
   return (
     <NextUIProvider>
-      <div className="vite-dark bg-background text-text-primary overflow-auto">
+      <div className="gemini-dark bg-background text-text-primary">
         <RouterProvider router={router} />
       </div>
     </NextUIProvider>

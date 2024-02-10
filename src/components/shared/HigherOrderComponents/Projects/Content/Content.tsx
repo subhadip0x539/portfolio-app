@@ -1,27 +1,30 @@
 import {
-  DockerIcon,
-  FlaskIcon,
-  GinGonicIcon,
+  DockerColored,
+  FlaskColored,
+  GinGonicColored,
   GitHub,
-  GoIcon,
-  JavaScriptIcon,
-  MaterialUiIcon,
+  GoColored,
+  JavaScriptColored,
+  MaterialUiColored,
   MoreHorizontal,
   OpenInNew,
-  PythonIcon,
-  ReactIcon,
-  TypeScriptIcon,
+  PythonColored,
+  ReactColored,
+  TypeScriptColored,
 } from "../../../Icons";
 import {
   Avatar,
   Button,
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
+  Chip,
   Dropdown,
   DropdownItem,
   DropdownMenu,
   DropdownTrigger,
 } from "@nextui-org/react";
-import React from "react";
-import { hexToRgba } from "../../../../../utils/methods";
 import { TProject } from "../../../../../types/common";
 
 export function Content() {
@@ -36,21 +39,21 @@ export function Content() {
       skills: [
         {
           name: "TypeScript",
-          icon: <TypeScriptIcon />,
+          icon: <TypeScriptColored />,
           category: "languages",
           key: "ts",
           color: "#007acc",
         },
         {
           name: "React",
-          icon: <ReactIcon />,
+          icon: <ReactColored />,
           category: "languages",
           key: "ts",
           color: "#007acc",
         },
         {
           name: "MaterialUI",
-          icon: <MaterialUiIcon />,
+          icon: <MaterialUiColored />,
           category: "languages",
           key: "ts",
           color: "#007fff",
@@ -68,14 +71,14 @@ export function Content() {
       skills: [
         {
           name: "Go",
-          icon: <GoIcon />,
+          icon: <GoColored />,
           category: "languages",
           key: "ts",
           color: "#79d4fd",
         },
         {
           name: "Gin",
-          icon: <GinGonicIcon />,
+          icon: <GinGonicColored />,
           category: "languages",
           key: "ts",
           color: "#0090d1",
@@ -83,7 +86,7 @@ export function Content() {
         {
           name: "Docker",
           color: "#2396ed",
-          icon: <DockerIcon />,
+          icon: <DockerColored />,
           category: "languages",
           key: "ts",
         },
@@ -99,35 +102,35 @@ export function Content() {
       skills: [
         {
           name: "Python",
-          icon: <PythonIcon />,
+          icon: <PythonColored />,
           category: "languages",
           key: "ts",
           color: "#2673b4",
         },
         {
           name: "JavaScript",
-          icon: <JavaScriptIcon />,
+          icon: <JavaScriptColored />,
           category: "languages",
           key: "ts",
           color: "#f7df1e",
         },
         {
           name: "Flask",
-          icon: <FlaskIcon />,
+          icon: <FlaskColored />,
           category: "languages",
           key: "ts",
           color: "#ffffff",
         },
         {
           name: "React",
-          icon: <ReactIcon />,
+          icon: <ReactColored />,
           category: "languages",
           key: "ts",
           color: "#007acc",
         },
         {
           name: "MaterialUI",
-          icon: <MaterialUiIcon />,
+          icon: <MaterialUiColored />,
           category: "languages",
           key: "ts",
           color: "#007fff",
@@ -140,56 +143,59 @@ export function Content() {
     <div className="flex flex-col gap-16">
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-4">
         {projects.map((item, index) => (
-          <div
-            className="bg-accent p-6 flex flex-col gap-8 rounded-lg justify-between"
+          <Card
+            shadow="sm"
             key={index}
+            isPressable
+            className="bg-accent p-4"
+            as="div"
           >
-            <div className="flex flex-col gap-4">
-              <div className="flex justify-between items-center">
-                <Avatar radius="sm" className="text-lg" fallback={"🛠️"} />
-                <Dropdown placement="bottom-end">
-                  <DropdownTrigger>
-                    <Button
-                      isIconOnly
-                      radius="full"
-                      variant="ghost"
-                      startContent={<MoreHorizontal size={18} />}
-                    />
-                  </DropdownTrigger>
-                  <DropdownMenu variant="flat" aria-label="Dropdown menu">
-                    <DropdownItem
-                      key="github"
-                      startContent={<GitHub size={18} />}
-                    >
-                      GitHub
-                    </DropdownItem>
-                    <DropdownItem
-                      key="externallink"
-                      startContent={<OpenInNew size={18} />}
-                    >
-                      External Link
-                    </DropdownItem>
-                  </DropdownMenu>
-                </Dropdown>
-              </div>
+            <CardHeader className="flex justify-between">
+              <Avatar radius="sm" className="text-lg" fallback={"🛠️"} />
+              <Dropdown placement="bottom-end">
+                <DropdownTrigger>
+                  <Button
+                    isIconOnly
+                    radius="full"
+                    variant="ghost"
+                    startContent={<MoreHorizontal size={18} />}
+                  />
+                </DropdownTrigger>
+                <DropdownMenu variant="flat" aria-label="Dropdown menu">
+                  <DropdownItem
+                    key="github"
+                    startContent={<GitHub size={18} />}
+                  >
+                    GitHub
+                  </DropdownItem>
+                  <DropdownItem
+                    key="externallink"
+                    startContent={<OpenInNew size={18} />}
+                  >
+                    External Link
+                  </DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
+            </CardHeader>
+            <CardBody className="flex flex-col gap-4">
               <h4 className="text-foreground text-lg">{item.name}</h4>
               <p className="sm:text-sm text-xs text-foreground-50 font-thin">
                 {item.description}
               </p>
-            </div>
-            <div className="flex gap-2 flex-wrap">
+            </CardBody>
+            <CardFooter className="flex flex-wrap gap-2">
               {item.skills.map((skill, index) => (
-                <Avatar
+                <Chip
+                  className="text-sm"
+                  variant="flat"
+                  color="primary"
                   key={index}
-                  fallback={React.cloneElement(skill.icon, { size: 16 })}
-                  className="h-8 w-8 cursor-pointer"
-                  style={{
-                    background: hexToRgba(skill.color, 0.125),
-                  }}
-                />
+                >
+                  {skill.name}
+                </Chip>
               ))}
-            </div>
-          </div>
+            </CardFooter>
+          </Card>
         ))}
       </div>
     </div>

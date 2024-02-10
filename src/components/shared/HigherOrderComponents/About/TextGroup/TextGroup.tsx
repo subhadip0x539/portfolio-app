@@ -1,19 +1,18 @@
 import { Button } from "@nextui-org/react";
-import { ArrowRightIcon, SlackIcon } from "../../../Icons";
+import { ArrowRight, GitHub } from "../../../Icons";
 
 export function TextGroup() {
   return (
-    <div className="flex flex-col gap-4 max-w-prose sm:text-left text-center sm:items-start items-center">
-      <p className="sm:text-sm text-xs text-primary">Hi👋 my name is</p>
-      <h2 className="sm:text-5xl text-4xl alt-font-family font-bold text-foreground">
+    <div className="flex flex-col gap-8 text-center max-w-screen-lg items-center">
+      <h2 className="sm:text-6xl text-4xl alt-font-family font-bold text-foreground text-clip-animate">
         Subhadip Biswas
       </h2>
-      <h2 className="sm:text-5xl text-4xl alt-font-family font-bold text-clip">
+      <h2 className="sm:text-6xl text-4xl alt-font-family font-bold text-foreground">
         Building Stuffs on the Web
       </h2>
-      <p className="sm:text-sm text-xs text-foreground-50 font-thin">
-        I am a <span className="text-warning">Full Stack Developer</span> and{" "}
-        <span className="text-warning">Cybersecurity Enthusiast</span>, I
+      <p className="sm:text-sm text-xs text-foreground-50 font-thin max-w-screen-md">
+        I am a <span className="text-primary">Full Stack Developer</span> and{" "}
+        <span className="text-priamry">Cybersecurity Enthusiast</span>, I
         combine technical expertise with a security-focused mindset to deliver
         innovative solutions.
       </p>
@@ -22,7 +21,7 @@ export function TextGroup() {
           className="rounded-full px-4 gap-4"
           variant="flat"
           color="primary"
-          endContent={<ArrowRightIcon className="w-4 h-4" />}
+          endContent={<ArrowRight size={16} />}
         >
           Resume
         </Button>
@@ -30,9 +29,9 @@ export function TextGroup() {
           className="rounded-full px-4 gap-4"
           variant="flat"
           color="default"
-          startContent={<SlackIcon className="w-4 h-4" />}
+          startContent={<GitHub size={16} />}
         >
-          Slack Me
+          GitHub
         </Button>
       </div>
     </div>
