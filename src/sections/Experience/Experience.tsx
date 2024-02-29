@@ -1,7 +1,4 @@
-import {
-  TextGroup,
-  Content,
-} from "../../components/shared/HigherOrderComponents/Experience";
+import { Content, TextGroup } from "../../hocs/Experience";
 
 export function Experience() {
   return (

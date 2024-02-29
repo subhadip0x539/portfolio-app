@@ -30,11 +30,11 @@ import {
   ScssColored,
   SwaggerColored,
   TypeScriptColored,
-} from "../../../Icons";
-import { hexToRgba } from "../../../../../utils/methods";
+} from "../../../components/shared/Icons";
+import { hexToRgba } from "../../../utils/methods";
 
 import React, { useMemo, useState } from "react";
-import { TCategory, TSkill } from "../../../../../types/common";
+import { TCategory, TSkill } from "../../../types/common";
 
 const categories: { name: string; key: TCategory | "all" }[] = [
   {
@@ -270,13 +270,7 @@ const skills: TSkill[] = [
 
 export function Content() {
   const [category, setCategory] = useState<TCategory | "all">("all");
-  const filteredSkills = useMemo(
-    () =>
-      category === "all"
-        ? skills
-        : skills.filter((item) => item.category === category),
-    [category]
-  );
+  const filteredSkills = useMemo(() => (category === "all" ? skills : skills.filter((item) => item.category === category)), [category]);
 
   return (
     <div className="flex flex-col items-center justify-center gap-8">
@@ -296,14 +290,7 @@ export function Content() {
       </div>
       <div className="flex flex-wrap gap-4 items-center justify-center">
         {filteredSkills.map((item) => (
-          <Tooltip
-            key={item.key}
-            content={item.name}
-            showArrow={true}
-            color="default"
-            placement="bottom"
-            radius="sm"
-          >
+          <Tooltip key={item.key} content={item.name} showArrow={true} color="default" placement="bottom" radius="sm">
             <Avatar
               fallback={React.cloneElement(item.icon, { size: 26 })}
               className="h-14 w-14 cursor-pointer"

@@ -1,15 +1,15 @@
-import { NextUIProvider } from "@nextui-org/react";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
 import "./index.scss";
+import { ThemeProvider } from "next-themes";
 
 function App() {
   return (
-    <NextUIProvider>
-      <div className="gemini-dark bg-background text-text-primary">
+    <ThemeProvider attribute="class" defaultTheme="dark">
+      <div className="bg-background text-text-primary">
         <RouterProvider router={router} />
       </div>
-    </NextUIProvider>
+    </ThemeProvider>
   );
 }
 

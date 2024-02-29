@@ -1,4 +1,4 @@
-import { Content, TextGroup } from "../../components/shared/HigherOrderComponents/Skills";
+import { Content, TextGroup } from "../../hocs/Skills";
 
 export function Skills() {
   return (

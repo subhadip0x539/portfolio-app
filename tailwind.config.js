@@ -14,26 +14,7 @@ export default {
   plugins: [
     nextui({
       themes: {
-        "vite-dark": {
-          extend: "dark",
-          colors: {
-            background: {
-              DEFAULT: "#1B1B1F",
-            },
-            accent: {
-              DEFAULT: "#202127",
-            },
-            foreground: {
-              DEFAULT: "#FFFFFF",
-              50: "rgba(255, 255, 255, 0.5)",
-            },
-            primary: {
-              DEFAULT: "#646CFF",
-            },
-          },
-        },
-        "gemini-dark": {
-          extend: "dark",
+        dark: {
           colors: {
             background: {
               DEFAULT: "#060606",

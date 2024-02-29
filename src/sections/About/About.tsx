@@ -1,4 +1,4 @@
-import { TextGroup } from "../../components/shared/HigherOrderComponents/About";
+import { TextGroup } from "../../hocs/About";
 
 export function About() {
   return (

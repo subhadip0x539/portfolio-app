@@ -1,5 +1,4 @@
-import { TextGroup } from "../../components/shared/HigherOrderComponents/Projects";
-import { Content } from "../../components/shared/HigherOrderComponents/Projects/Content/Content";
+import { Content, TextGroup } from "../../hocs/Projects";
 
 export function Projects() {
   return (
